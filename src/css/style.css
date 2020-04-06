@@ -1,6 +1,185 @@
 html, body {
   overflow: hidden; }
 
+.boton_reg{
+    text-decoration: none;
+    padding: 7px;
+    font-size: 12px;
+    background-color: #8c8c8c;
+    border-radius: 5px;
+
+}
+
+.boton_reg:hover{
+
+    background-color: #555555;
+    color: black;
+
+}
+.content-right-login{
+
+    margin-left: 700px;
+    position: relative;
+    bottom:60px;
+}
+
+.login-box{
+    margin:0 623px;
+    width: 400px;
+    height: 290px;
+    background: #0f4deb;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    box-sizing: border-box;
+}
+
+.login-box h3 {
+
+    margin:0 160px 20px;
+    padding:0;
+    font-weight: bold;
+    display:block;
+    font-size: 18px;
+}
+
+.login-box input[type="text"]{
+    margin:0 35px 20px;
+    width:80%;
+    border-radius: 5px;
+
+}
+.login-box input[type="password"]{
+    margin:0 35px 20px;
+    width:80%;
+    border-radius: 5px;
+
+}
+
+.login-box button[type="submit"]{
+
+    margin:20px 120px;
+    width:40%;
+    background: #8c8c8c;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.login-box button[type="submit"]:hover{
+
+    background-color: #555555;
+    color: black;
+
+}
+
+.headerTools{
+    background: #656f74;
+    padding: 2px ;
+    width: 170px;
+    height: 30px;
+    color: white;
+    border-radius: 5px;
+    position: relative;
+    top:80px;
+    left: 600px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.headerAdvise{
+    background: #656f74;
+    padding: 2px ;
+    width: 250px;
+    height: 30px;
+    color: white;
+    border-radius: 5px;
+    position: relative;
+    left: 270px;
+    bottom: 30px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.rec-advise{
+    position: relative;
+    left: 300px;
+    top: 40px;
+    background:white;
+    width: 800px;
+    height: 500px;
+    border-radius: 10px;
+    border: #0f4deb 1px solid;
+}
+.rec-advise p{
+
+    text-align: center;
+    color: blue;
+    font-size: 30px;
+
+}
+
+.rec-advise button{
+    position: relative;
+    bottom: 40px;
+    left: 250px;
+    border-radius: 8px;
+    border: #0f4deb 1px solid;
+}
+
+.clientArea{
+
+    background-color: #0dcfff;
+    width: 230px;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 5px;
+
+
+}
+
+.clientArea:hover{
+
+    background-color: #61c2ed;
+    color: #555555 ;
+
+}
+
+.container-client{
+    width: 20%;
+    min-width: 300px;
+    margin: 50px;
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+    line-height: 18px;
+}
+
+.container-client.clientArea{
+    width: 100%;
+}
+
+.container-client ul{
+    list-style: none;
+}
+
+.container-client.clientArea li a{
+    color: #122b40;
+    display: block;
+    padding: 15px 20px;
+    background: #d0e9c6;
+}
+
+.container-client.clientArea.icon{
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.container-client.clientArea li a:hover{
+    background: aquamarine;
+}
+
+
+
+
 *:focus {
   outline: none !important;
   box-shadow: none !important; }

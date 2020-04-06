@@ -1,8 +1,10 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+    <meta charset="utf 8">
+    <title> form login | Tintoreria</title>
+    <link rel="stylesheet" href="css/master.css">
     <!-- Basic Page Info -->
     <meta charset="utf-8">
     <title>Laaris - Coming Soon</title>
@@ -26,7 +28,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/style.css">
-
 </head>
 <body>
 <div class="wrapper">
@@ -96,8 +97,8 @@
                                     <div class="col-md-12">
                                         <div class="form-group tt">
                                         <textarea id="form_message" name="message" class="form-control"
-                                              placeholder="Write message..." rows="4" required="required"
-                                              data-error="Please, leave us a message."></textarea>
+                                                  placeholder="Write message..." rows="4" required="required"
+                                                  data-error="Please, leave us a message."></textarea>
                                             <div class="help-block with-errors"></div>
                                         </div>
                                     </div>
@@ -130,68 +131,51 @@
         <span></span>
     </div>
 
-	 <div id="particles-js"></div>
 
+    <div id="particles-js"></div>
     <div class="home svg">
-        <img src="resources/img/img-inic.png" class="ml-5" style="float: right;margin-top:20px;">
-        <img src="resources/img/Lavadora.png" class="mr-5" style="float: right;clear:right;margin-top:50px;">
         <div class="content">
-            <h1 class="big-title font_serif ssa js-spanize">Tintorerías</h1>
-            <h2 class="font_serif sa js-spanize">Limpio</h2>
+            <div class="content-left">
+                <h1 class="big-title font_serif ssa js-spanize">Tintorerías</h1>
+            </div>
+            <div class="content-right-login">
+                <h2 style="width: 200px;text-align: center" class="font_serif sa js-spanize">Limpio</h2>
+            </div>
             <br>
-            <div style="width: 330px; margin-left: 450px;margin-top:150px">
-                <button onclick="location.href='AccessUser.html'" class="btn btn-secondary">Acceso al Sistema <i class="fa fa-sign-in"></i></button>
-            </div>
-            <div class="countdown fadeInUpBig animated3">
-                <h5>Launching in :</h5>
-                <ul id="countdown"></ul>
-            </div>
-        </div>
-    </div>
-</div>
-    <!--
-  <div class="subscribe fadeIn animated">
-        <h4>Subscribe to be notified  <i class="fa fa-minus"></i></h4>
-        <form id="subscribe-form" method="post" action="#">
-            <div class="messages"></div>
-            <div class="controls">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="form-group">
-                            <input id="form_fname" type="text" name="name" class="form-control"
-                                   placeholder="Full Name" required="required" data-error="Full Name is required.">
-                            <div class="help-block with-errors"></div>
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="form-group">
-                            <input id="form_email" type="email" name="email" class="form-control"
-                                   placeholder="Your Email" required="required" data-error="Valid email is required.">
-                            <div class="help-block with-errors"></div>
-                        </div>
-                    </div>
+            <img src="resources/img/img-access.png" class="mr50" style="float: left;margin-left:200px;">
+            <div class="login-box">
+                <h3><br>Bienvenido</h3>
+            <form method="post">
+                <!--USERNAME  -->
+                <div class="username">
+                    <input type="text" placeholder="&#xf007  Usuario" required="required" style="font-family:Arial, FontAwesome" data-error="username is required.">
                 </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <input type="submit" class="btn-send btn disabled" value="Subscribe">
-						
-						
-                    </div>
-                </div>
-            </div>
-        </form>
-        <span>*we’ll get in touch with you at the email</span>
-    </div>
-</div>
--->
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
-<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/contact.js"></script>
-<script type="text/javascript" src="js/validator.js"></script>
-<script type="text/javascript" src="js/countdown.js"></script>
-<script type="text/javascript" src="js/particles.min.js"></script>
-<script type="text/javascript" src="js/particles_2.js"></script>
-<script type="text/javascript" src="js/script.js"></script>
 
-</body>
-</html>
+                <!--PASSWORD  -->
+                <div class="password">
+
+                    <input type="password" placeholder="&#xf09c  Contraseña" required="required"  style="font-family:Arial, FontAwesome" data-error="password is required.">
+                </div>
+                <!--SIGN-IN  -->
+                <div class="B-sign">
+                    <button type="submit" class="btn btn-secondary">Acceder   <i class="fa fa-sign-in"></i></button>
+                    <a class="boton_reg" href="Registrarse.html" style= "position: relative;bottom: 30px;left: 5px" >Registrarse</a>
+                </div>
+            </form>
+        </div>
+
+    </div>
+    </div>
+</div>
+
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/contact.js"></script>
+    <script type="text/javascript" src="js/validator.js"></script>
+    <script type="text/javascript" src="js/countdown.js"></script>
+    <script type="text/javascript" src="js/particles.min.js"></script>
+    <script type="text/javascript" src="js/particles_2.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+<</body>
+<</html>
+
