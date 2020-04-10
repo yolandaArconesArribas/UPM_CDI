@@ -145,20 +145,10 @@
             <button id="btn-back" onclick="location.href="#"><i class="fa fa-reply" style="margin-right: 2px;color: #1b6d85"></i>Volver</button>
             <button id="btn-cancel" onclick="location.href="#"><i class="fa fa-times" style="margin-right: 2px;color: red"></i>Cancelar</button>
             <button id="btn-advise" onclick="location.href='index.html'"><i class="fa fa-bell" style="margin-right: 2px;color: yellow"></i>Avisar al cliente</button>
-            <script>
-                var btn=document.getElementById('btn-advise');
-                btn.addEventListener('click', function() {
-                    Push.create("Aviso Enviado", {
-                        body: "Aviso ..... enviado.",
-                        icon: "resources/img/Notificacion.jpg",
-                        tiemout: 4000,
-                    });
-                });
-            </script>
+
 
         </div>
     </div>
-    <script type="text/javascript" src="js/push.min.js"></script>
     <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
     <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/contact.js"></script>

@@ -10,10 +10,12 @@ const createWindow = () => {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
     width: 1200,
-    height: 800,
+    height: 920,
     webPreferences: {
       devTools: false // show console
-    }
+    },
+      resizable: false,
+      icon: __dirname + 'resources/img/fav.png'
   });
 
   // and load the index.html of the app.

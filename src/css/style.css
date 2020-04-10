@@ -1622,14 +1622,14 @@ body .vegas-container {
     left: 0;
     bottom: 0;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent, transparent, transparent);
-    width: 100%;
-    height: 100vh;
+
     z-index: -1; }
   .home.svg:before, .home.svg:after {
     display: none; }
   .home .content {
-    width: 65%;
-    padding: 10%;
+    width: 80%;
+      padding: 0;
+      margin: auto;
     color: #fff; }
     .home .content h1 {
       font-size: 6vmax;
@@ -1657,166 +1657,10 @@ body .vegas-container {
         color: transparent !important;
         -webkit-background-clip: text; }
 
-@media all and (min-width: 1600px) {
-  body, .countdown #countdown li span, .home {
-    font-size: .8vmax; }
-
-  .subscribe {
-    width: 500px;
-    min-height: 340px; }
-    .subscribe h4 {
-      font-size: 1.2vmax;
-      height: 60px;
-      line-height: 60px; }
-      .subscribe h4 .subscribe h4 i {
-        right: 25px;
-        top: 25px; }
-    .subscribe #subscribe-form .form-control {
-      border-width: 2px;
-      line-height: 60px;
-      height: 60px;
-      font-size: .8vmax; }
-    .subscribe #subscribe-form .form-group:before {
-      height: 60px; }
-
-  .contact .form-group:before {
-    height: 60px; }
-
-  .btn {
-    height: 60px;
-    line-height: 58px;
-    padding: 0 50px;
-    font-size: .8vmax; }
-
-  .subscribe span {
-    font-size: 12px; }
-
-  .subscribe.aa {
-    max-height: 60px;
-    min-height: 60px; }
-
-  .contact .form-group {
-    height: 60px; }
-
-  .contact .form-control {
-    border-width: 2px;
-    line-height: 60px;
-    height: 60px;
-    font-size: .8vmax; }
-
-  .left .content .content-left:before {
-    width: 2px; }
-
-  .contact .tt, .contact .tt textarea, .contact .tt:before {
-    height: 200px; } }
-@media all and (min-width: 1024px) and (max-width: 1366px) {
-  .subscribe {
-    width: 360px; } }
-@media all and (min-width: 768px) and (max-width: 1024px) {
-  .home .content {
-    width: 100%;
-    padding: 10% 10% 10% 15%; }
-
-  .left .content .content-left {
-    width: 100%;
-    padding-right: 0;
-    display: inline-block;
-    margin-bottom: 10%; }
-
-  .left .content .content-right {
-    width: 100%;
-    padding-left: 0;
-    display: inline-block; }
-
-  .left .content .content-left:before {
-    display: none; } }
-@media all and (max-width: 767px) {
-  .subscribe {
-    width: 70vw;
-    position: fixed;
-    z-index: 9; }
-
-  .home .content {
-    width: calc(100% - 50px);
-    float: right;
-    padding: 5%; }
-
-  .left, .share, .share ul {
-    width: 50px; }
-
-  #stripes {
-    left: 50px;
-    width: calc(100% - 50px); }
-
-  .share .sh i {
-    position: absolute;
-    top: -2px;
-    left: -25px; }
-
-  .subscribe h4 {
-    line-height: 40px;
-    font-size: 14px; }
-
-  .subscribe.aa {
-    max-height: 40px;
-    min-height: 40px; }
-
-  .copyright {
-    left: -85px; }
-
-  .menu-collapsed {
-    height: 50px;
-    width: 50px; }
-
-  .bar {
-    left: 10px;
-    top: 10px; }
-
-  .bar span {
-    left: 9.5px;
-    top: 24px; }
-
-  .countdown h5 {
-    font-size: 2.5vmax; }
-
-  .menu-collapsed.menu-expanded {
-    width: 100%;
-    height: 100%;
-    overflow-x: hidden;
-    padding: 5%; }
-
-  .left .content .content-left {
-    width: 100%;
-    padding-right: 0;
-    display: block; }
-
-  .left .content .content-right {
-    width: 100%;
-    padding-left: 0;
-    display: block; }
-
-  .left .content .content-left:before {
-    display: none; }
-
-  .left .content .title {
-    font-size: 6vmax; }
-
-  .left .content .ccc .cc {
-    width: 100%;
-    margin-bottom: 15px; }
-
-  .home {
-    padding-bottom: 15%; }
-
-  .home .content h2 span {
-    font-size: 16px; }
-
-  .home .content h2:before {
-    height: 24px; }
-
-  .subscribe h4 i {
-    top: 15px; } }
-::-webkit-scrollbar {
-  display: none; }
 
 /*# sourceMappingURL=style.css.map */
+
+input {
+    padding: 5px;
+    padding-left: 15px;
+}
