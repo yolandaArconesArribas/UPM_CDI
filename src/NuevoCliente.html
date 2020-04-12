@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf 8">
-    <title> Menu | Tintoreria</title>
+    <title> form add | Tintoreria</title>
     <link rel="stylesheet" href="css/master.css">
     <!-- Basic Page Info -->
     <meta charset="utf-8">
@@ -19,7 +19,7 @@
     <!-- FONT -->
     <link href="https://fonts.googleapis.com/css?family=Lato:100,400,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:700|Lobster+Two" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
     <!-- ICON FONTS -->
     <link rel="stylesheet" href="css/font_awesome.css">
 
@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
- <div class="wrapper">
+<div class="wrapper">
     <div class="left">
         <div class="menu-collapsed">
             <div class="bar"><span></span></div>
@@ -131,57 +131,57 @@
     </div>
     <div id="particles-js"></div>
     <div class="home svg">
-        <div class="headerTools">
-            <a href="#">Mis Herramientas <i class="fa fa-cogs"></i> </a>
+        <div class="headerAddClient">
+            <a>Nuevo Cliente<i class="fa fa-user-plus" style="position: relative;left:15px"></i> </a>
         </div>
-        <div class="toolsPanel" style="position: relative;left: 330px;top:150px">
-            <p>
-                <button  class="btn btn-lg btn-primary" type="button" data-toggle="collapse" href="#areaDeCliente" role="button" aria-expanded="false" aria-controls="areaDeCliente"><i class="fa fa-user" style="position:relative;right: 10px;font-size: 40px"></i>Área de Cliente</button >
-                <button  class="btn btn-lg btn-primary" type="button" data-toggle="collapse" href="#areaDePedidos" role="button" aria-expanded="false" aria-controls="areaDePedidos"><i class="fa fa-cart-arrow-down" style="position:relative;top:5px;right: 10px;font-size: 40px"></i>Área de Pedidos</button >
-                <button  class="btn btn-lg btn-primary" type="button" data-toggle="collapse" href="#areaDePromo" role="button" aria-expanded="false" aria-controls="areaDePromo"><i class="fa fa-percent" style="position:relative;top:5px;right: 10px;font-size: 40px"></i>Área de Promo</button >
-                <button  class="btn btn-lg btn-primary" type="button" data-toggle="collapse" href="#areaDeProductos" role="button" aria-expanded="false" aria-controls="areaDeProductos" style="background-color: palegreen"><i class="fa fa-cube" style="position:relative;top:5px;right: 10px;font-size: 40px"></i>Área de Productos</button >
-            </p>
-            <div class="row">
-                <div class="col">
-                    <div class="collapse multi-collapse" id="areaDeCliente">
-                        <div class="card card-body" style= "width: 180px; height: 200px ">
-                            <a class="buttonSelectPanel" href="#">Historial Cliente</a>
-                            <a class="buttonSelectPanel" href="#" style="position: relative;top:100px; padding: 0 ;color: white;background-color: #761c19">Cerrar Sesion</a>
-                        </div>
+        <div class="content">
+            <div class="client-form">
+                <form method="post">
+                    <div class="name">
+                        <a style="position: relative;top: 20px;left: 10px">Nombre<i class="fas fa-id-badge" style="margin-left:130px; font-family:FontAwesome"></i></a>
+                        <input type="text" required="required" data-error="Nombre requierido.">
                     </div>
-                </div>
-                <div class="col">
-                    <div class="collapse multi-collapse" id="areaDePedidos" style="position: relative;left:505px;top:150px">
-                        <div class="card card-body" style= "width: 215px ">
-                            <a class="buttonSelectPanel" href="#">Realizar Pedido</a>
-                            <a class="buttonSelectPanel" href="#">Historial Pedidos</a>
-                            <a class="buttonSelectPanel" href="#">Realizar Factura</a>
-                            <a class="buttonSelectPanel" href="#">Enviar Aviso</a>
-                        </div>
+                    <div class="surname">
+                        <a style="position: relative;left: 10px">Apellidos<i class="fas fa-id-badge" style="margin-left:120px; font-family:FontAwesome"></i></a>
+                        <input type="text" required="required"  style="position: relative;bottom: 25px" data-error="Apellidos requierido.">
                     </div>
-                </div>
-                <div class="col">
-                    <div class="collapse multi-collapse" id="areaDePromo">
-                        <div class="card card-body" style= "width: 200px ">
-                            <a href="#">Añadir Promo</a>
-                            <a href="#">Modificar Promo</a>
-                            <a href="#">Eliminar Promo</a>
-                        </div>
+                    <div class="dni">
+                        <a style="position: relative;bottom: 15px;left: 10px">DNI<i class="fas fa-id-card" style="margin-left:158px; font-family:FontAwesome"></i></a>
+                        <input type="text" required="required"  style="position: relative;bottom: 40px" data-error="DNI requierido.">
                     </div>
-                </div>
-                <div class="col">
-                    <div class="collapse multi-collapse" id="areaDeProductos">
-                        <div class="card card-body" style= "width: 200px">
-                            <a href="#">Añadir Producto</a>
-                            <a href="#">Modificar Producto</a>
-                            <a href="#">Eliminar Producto</a>
-                        </div>
+                    <div class="domicile">
+                        <a style="position: relative;bottom: 25px;left: 10px">Domicilio<i class="fas fa-home" style="margin-left:120px; font-family:FontAwesome"></i></a>
+                        <input type="text" required="required"  style="position: relative;bottom: 55px" data-error="Domicilio requierido.">
                     </div>
-                </div>
+                    <div class="postalcode">
+                        <a style="position: relative;bottom: 40px;left: 10px">Código Postal<i class="fas fa-sort-numeric-asc" style="margin-left:90px; font-family:FontAwesome"></i></a>
+                        <input type="text" required="required"  style="width: 28%;position: relative;bottom: 70px" data-error="Código Postal requierido.">
+                    </div>
+                    <div class="locality">
+                        <a style="position: relative;bottom: 55px;left: 10px">Localidad<i class="fas fa-globe" style="margin-left:120px; font-family:FontAwesome"></i></a>
+                        <input type="text"  required="required"  style="width: 28%;position: relative;bottom: 85px" data-error="Localidad requierida.">
+                    </div>
+                    <div class="contac">
+                        <a style="position: relative;bottom: 70px;left: 10px">Telefono Contacto<i class="fas fa-phone" style="margin-left:57px; font-family:FontAwesome"></i></a>
+                        <input type="text" required="required"  style="width: 28%;position: relative;bottom: 100px" data-error="Telefono requierido.">
+                        <input type="text" style="width: 28%;position: relative;bottom: 130px;left: 255px">
+                    </div>
+                    <div class="loyalty-target">
+                        <a style="position: relative;bottom: 115px;left: 10px">Tarjeta Fidelación<i class="fas fa-credit-card" style="margin-left:60px; font-family:FontAwesome"></i></a>
+                        <input type="text" required="required"  style="position: relative;bottom: 145px" data-error="Tarjeta Fidelación requierida.">
+                    </div>
+                    <div class="point-accumulated">
+                        <a style="position: relative;bottom: 130px;left: 10px">Puntos Acumulados<i class="fas fa-star" style="margin-left:45px; font-family:FontAwesome"></i></a>
+                        <input type="text" required="required"  style="position: relative;bottom: 160px" data-error="Puntos requierido.">
+                    </div>
+                </form>
+                <button id="btn-save" onclick="location.href="#"><i class="fa fa-download" style="margin-right: 2px;color: #1b6d85"></i>Guardar</button>
+                <button id="btn-cancel" onclick="location.href="#"><i class="fa fa-times" style="margin-right: 2px;color: red"></i>Cancelar</button>
             </div>
         </div>
     </div>
 </div>
+
 <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
 <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/contact.js"></script>
@@ -190,7 +190,5 @@
 <script type="text/javascript" src="js/particles.min.js"></script>
 <script type="text/javascript" src="js/particles_2.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script src="js/main.js"></script>
 <</body>
 <</html>
