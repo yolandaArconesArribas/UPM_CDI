@@ -24,94 +24,12 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/style.css">
 
 </head>
 <body>
+
 <div class="wrapper">
-    <div class="left">
-        <div class="menu-collapsed">
-            <div class="bar"><span></span></div>
-            <div class="content">
-                <div class="content-left">
-                    <h2 class="title font_bold">About us</h2>
-                    <div class="space_5"></div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum magni minus nemo numquam quis rem
-                        repuiandae tempore? Architecto dolor exercitationem, impedit ipsam iste laudantium nesciunt odio
-                        repudiandae tempore? Architecto dolor exercitationem, impedit ipsam iste laudantium nesciunt odio
-                        pariatur perferendis quos rem!</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum magni minus nemo numquam quis rem
-                        repudiandae tempore? Architecto dolor exercitationem, impedit ipsam iste laudantium nesciunt odio
-                        pariatur perferendis quos rem!</p>
-                    <div class="space_5"></div>
-                    <div class="ccc">
-                        <div class="cc">
-                            <img src="resources/img/map.png" class="img-responsive" alt="">
-                            <p class="color_grey font_bold">Street Lorem Ipsum <br>New York, USA</p>
-                        </div>
-                        <div class="cc">
-                            <img src="resources/img/envelope.png" class="img-responsive" alt="">
-                            <p class="color_grey font_bold"><a href="mailto:example@domain.com">example@domain.com</a></p>
-                        </div>
-                        <div class="cc">
-                            <img src="resources/img/telephone.png" class="img-responsive" alt="">
-                            <p class="color_grey font_bold"><a href="tel:+00 123 456 789" class="letter-spacing_1 font_bold">+00 123 456 789</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="content-right">
-                    <div class="contact">
-                        <h2 class="title">Get in touch</h2>
-                        <div class="space_5"></div>
-                        <form id="contact-form" method="post" action="#">
-                            <div class="messages"></div>
-                            <div class="controls">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <input id="form_name" type="text" name="name" class="form-control"
-                                                   placeholder="Your name" required="required" data-error="Name is required.">
-                                            <div class="help-block with-errors"></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <input id="formc_email" type="email" name="email" class="form-control"
-                                                   placeholder="Your email" required="required" data-error="Valid email is required.">
-                                            <div class="help-block with-errors"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <input id="form_subject" type="text" name="subject" class="form-control"
-                                                   placeholder="Write the subject">
-                                            <div class="help-block with-errors"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="form-group tt">
-                                        <textarea id="form_message" name="message" class="form-control"
-                                              placeholder="Write message..." rows="4" required="required"
-                                              data-error="Please, leave us a message."></textarea>
-                                            <div class="help-block with-errors"></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <input type="submit" class="btn btn-send" value="Send message">
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     <div id="stripes">
         <span></span>
         <span></span>
@@ -125,7 +43,43 @@
     <div class="home svg">
 
         <div class="content">
-            <br><br><br>  <br><br><br>
+            <br>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="#">Navbar</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Dropdown
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                        </li>
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </div>
+            </nav>
+            <br><br><br>
             <img class="rounded float-right" src="resources/img/img-inic.png">
 
             <h1 class="big-title font_serif ssa js-spanize">Tintorerías</h1>
