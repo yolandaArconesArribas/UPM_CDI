@@ -91,3 +91,10 @@
     color: #005257;
     font-size: 1vw;
 }
+
+.header-tools {
+    color: white; font-weight: normal; font-size: 1vw;
+}
+.header-tools:hover {
+    color: white;
+}
