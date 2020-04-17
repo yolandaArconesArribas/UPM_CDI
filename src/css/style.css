@@ -84,3 +84,10 @@
     text-align: right; color: #EEEEEE; font-weight: bold;
     font-size: 5vw;
 }
+
+.btn-cdi-green {
+    background-color: #ECF5CE;
+
+    color: #005257;
+    font-size: 1vw;
+}
