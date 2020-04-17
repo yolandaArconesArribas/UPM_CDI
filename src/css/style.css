@@ -98,3 +98,14 @@
 .header-tools:hover {
     color: white;
 }
+
+th {
+    background-color: #1155CC !important;
+}
+
+.btn-cdi-action {
+    background-color: #EEEEEE;
+    font-weight: bold;
+    color: #005257;
+    font-size: 1vw;
+}
