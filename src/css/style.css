@@ -109,3 +109,10 @@ th {
     color: #005257;
     font-size: 1vw;
 }
+
+.letter-cdi {
+    color: white;
+    background-color: #948BB7;
+    padding: 5px;
+    border-radius: 5px;
+}
