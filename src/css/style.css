@@ -124,6 +124,13 @@ th {
     border-radius: 5px;
 }
 
+.letter-cdi:hover {
+background-color: #98CE00;
+}
+
+.letter-cdi-active {
+    background-color: #98CE00;
+}
 .eye-cdi {
     color: #948BB7;
 }
