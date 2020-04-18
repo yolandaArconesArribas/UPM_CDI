@@ -109,6 +109,13 @@ th {
     color: #005257;
     font-size: 1vw;
 }
+.btn-cdi-action:hover {
+    background-color: #EEEEEE;
+    font-weight: bold;
+    color: #005257;
+    border: 1px solid #005257;
+    font-size: 1vw;
+}
 
 .letter-cdi {
     color: white;
@@ -119,4 +126,17 @@ th {
 
 .eye-cdi {
     color: #948BB7;
+}
+
+.form-cdi {
+    color: #948BB7;
+    font-weight: bold;
+}
+
+.cancelar i {
+    color: red;
+}
+
+.guardar i {
+    color: #0097A7;
 }
