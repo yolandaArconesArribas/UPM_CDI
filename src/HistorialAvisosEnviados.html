@@ -24,6 +24,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.css" rel="stylesheet">
 
 </head>
 <body>
@@ -61,78 +62,34 @@
                 <div class="col-12">
                     <div style="background-color: white">
 
-                        <table class="table table-bordered table-hover ">
-                            <thead class="thead-dark table-color">
-                            <tr>
-                                <th scope="col"> </th>
-                                <th scope="col" style="text-align: center"><i class="fa fa-archive" aria-hidden="true"></i> <br>Numero Pedido</th>
-                                <th scope="col" style="text-align: center"><i class="fa fa-commenting-o" aria-hidden="true"></i> <br> Aviso</th>
-                                <th scope="col" style="text-align: center"><i class="fa fa-calendar-check-o" aria-hidden="true"></i> <br>Estado</th>
-                                <th scope="col" style="text-align: center"><i class="fa fa-paper-plane" aria-hidden="true"></i><br>Enviado</th>
 
+                        <table id="table"
+                               data-pagination="true"
+                               data-data-field="items"
+                               data-checkbox-header="false"
+                               data-click-to-select="true"
+                               data-filter-control="true"
+                               data-show-search-clear-button="true"
+                        >
+                            <thead>
+                            <tr>
+                                <th data-field="state" data-checkbox="true"></th>
+                                <th data-field="index" data-filter-control="input"><i class="fa fa-archive" aria-hidden="true"></i> <br>Numero Pedido</th>
+                                <th data-field="Aviso" data-filter-control="input"><i class="fa fa-commenting-o" aria-hidden="true"></i> <br> Aviso</th>
+                                <th data-field="Estado"data-filter-control="input" ><i class="fa fa-calendar-check-o" aria-hidden="true"></i> <br>Estado</th>
+                                <th data-field="Enviado"data-filter-control="input" ><i class="fa fa-paper-plane" aria-hidden="true"></i> <br>Enviado</th>
 
                             </tr>
                             </thead>
-                            <thead class="thead-dark table-color">
-                            <tr>
-                                <th scope="col" style="background-color: white !important;"><input type="text" class="form-control"  placeholder="Filtro"/></th>
-                                <th scope="col" style="background-color: white !important;"><input type="text" class="form-control"  placeholder="Filtro"/></th>
-                                <th scope="col" style="background-color: white !important;"><input type="text" class="form-control"  placeholder="Filtro"/></th>
-                                <th scope="col" style="background-color: white !important;"><input type="text" class="form-control"  placeholder="Filtro"/></th>
-                                <th scope="col" style="background-color: white !important;"><input type="text" class="form-control"  placeholder="Filtro"/></th>
-
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-
-                                <td style="text-align: center"><input type="checkbox" ></td>
-                                <td>as</td>
-                                <td><a href="#">cliente</a></td>
-
-
-                                <td>
-                                    <div class="dropdown">
-                                        <button class="btn btn-link dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                           Entregado
-                                        </button>
-                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                            <a class="dropdown-item" href="#">Aprobado <span style="color: #4cae4c"><i class="fa fa-check" aria-hidden="true"></i></span></a>
-                                            <a class="dropdown-item" href="#">Another action</a>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td style="color: #4cae4c"><i class="fa fa-check" aria-hidden="true"></i></td>
-                            </tr>
-
-                            <tr>
-                                <td style="text-align: center"><input type="checkbox" ></td>
-                                <td>s</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                                <td>@mdo</td>
-
-                            </tr>
-
-                            </tbody>
-                            <tfoot>
-                            <tr>
-                                <td colspan="2">Mostrando 1 de 10 entradas</td>
-                                <td colspan="4" style="text-align: right">
-                                    <a href="">anterior</a>
-                                    <a href="">1</a><a href="">2</a><a href="">3</a><a href="">4</a><a
-                                        href="">5</a>
-                                    <a href="">siguiente</a>
-                                </td>
-                            </tr>
-                            </tfoot>
                         </table>
+
+
                     </div>
                 </div>
 
             </div>
 
-
+            <br><br>
             <div class="row justify-content-center">
               <div class="col-5">
                   <button class="btn btn-default btn-cdi-action"> <i class="fa fa-arrow-circle-left" aria-hidden="true"></i> Volver </button>
@@ -151,11 +108,90 @@
 <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/contact.js"></script>
 <script type="text/javascript" src="js/validator.js"></script>
-<script type="text/javascript" src="js/countdown.js"></script>
 <script type="text/javascript" src="js/particles.min.js"></script>
 <script type="text/javascript" src="js/particles_2.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
 
+<script src="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.js"></script>
+<script src="https://unpkg.com/bootstrap-table@1.16.0/dist/extensions/toolbar/bootstrap-table-toolbar.min.js"></script>
+<script src="https://unpkg.com/bootstrap-table@1.16.0/dist/extensions/filter-control/bootstrap-table-filter-control.min.js"></script>
+<script>
+    var $table = $('#table')
 
+    $(function() {
+
+        var data = [
+            {
+                "index": 0,
+                "guid": "09d0f81f-5cb2-45f4-87f7-c27749d17950",
+                "Aviso": "Presepuesto",
+                "Estado": "Aprobado",
+                "Enviado": "No",
+                "name": "Iva Lindsay",
+                "gender": "female",
+                "company": "RUGSTARS",
+                "email": "ivalindsay@rugstars.com",
+                "phone": "+1 (951) 579-3371",
+                "address": "278 Middagh Street, Rosewood, Arkansas, 5032"
+            },
+            {
+                "index": 1,
+                "guid": "b5eb34e9-a02c-42c3-a7a5-53c0931a4db8",
+                "Aviso": "Plus Limpieza",
+                "Estado": "Denegado",
+                "Enviado": "Si <i class=\"fa fa-calendar-check-o\" aria-hidden=\"true\"></i>",
+                "name": "Savannah Kramer",
+                "gender": "female",
+                "company": "LIQUIDOC",
+                "email": "savannahkramer@liquidoc.com",
+                "phone": "+1 (877) 449-2807",
+                "address": "218 Hicks Street, Marshall, Puerto Rico, 6472"
+            },
+            {
+                "index": 2,
+                "guid": "5fa7cd38-55c4-4638-868b-259065fa3eda",
+                "Aviso": "Plus Limpieza",
+                "Estado": "Denegado",
+                "Enviado": "No",
+                "name": "Lee Haynes",
+                "gender": "male",
+                "company": "SURELOGIC",
+                "email": "leehaynes@surelogic.com",
+                "phone": "+1 (897) 486-2984",
+                "address": "322 Lawn Court, Islandia, Kansas, 8742"
+            },
+            {
+                "index": 3,
+                "guid": "5cc41528-a257-449d-a0fa-ba4909f4eaf6",
+                "Aviso": "Desperfecto roto",
+                "Estado": "Denegado",
+                "Enviado": "No",
+                "name": "Horne Whitehead",
+                "gender": "male",
+                "company": "RECRISYS",
+                "email": "hornewhitehead@recrisys.com",
+                "phone": "+1 (974) 453-2181",
+                "address": "396 Hendrickson Place, Clarktown, Maryland, 1412"
+            },
+            {
+                "index": 4,
+                "guid": "a138efa2-1801-4069-b67a-f6e550e7de86",
+                "Aviso": "Pedido Listo para recoger",
+                "Estado": "Denegado",
+                "Enviado": "No",
+                "name": "Lottie Reed",
+                "gender": "female",
+                "company": "KENGEN",
+                "email": "lottiereed@kengen.com",
+                "phone": "+1 (869) 453-2700",
+                "address": "725 Laurel Avenue, Orviston, Utah, 8624"
+            }
+        ];
+
+
+        console.log(data);
+        $table.bootstrapTable({data: data})
+    })
+</script>
 </body>
 </html>

@@ -101,6 +101,8 @@
 
 th {
     background-color: #1155CC !important;
+    color: white !important;
+    text-align: center !important;
 }
 
 .btn-cdi-action {
@@ -146,4 +148,9 @@ background-color: #98CE00;
 
 .guardar i {
     color: #0097A7;
+}
+.fixed-table-toolbar {
+
+    background-color: #1155CC !important;
+    padding: 5px;
 }
