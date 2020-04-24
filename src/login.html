@@ -84,7 +84,7 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text" id="inputGroupPrepend"><i class="fa fa-unlock-alt" aria-hidden="true"></i></span>
                                     </div>
-                                    <input type="text" class="form-control" id="validationCustomUsername" placeholder="Password" aria-describedby="inputGroupPrepend" required>
+                                    <input type="text" class="form-control" id="validationCustomPassword" placeholder="Password" aria-describedby="inputGroupPrepend" required>
                                     <div class="invalid-feedback">
                                         Porfavor introduce tu contraseña
                                     </div>
@@ -93,30 +93,10 @@
                         <div style="text-align: center">
                         <button class="btn btn-primary btn-cdi" type="button">Registro <i class="fa fa-user-plus" aria-hidden="true"></i></button>
                         <button class="btn btn-primary btn-cdi" type="submit">Entrar <i class="fa fa-sign-in" aria-hidden="true"></i></button>
+
                         </div>
                     </form>
-
-                    <script>
-                        // Example starter JavaScript for disabling form submissions if there are invalid fields
-                        (function() {
-                            'use strict';
-                            window.addEventListener('load', function() {
-                                // Fetch all the forms we want to apply custom Bootstrap validation styles to
-                                var forms = document.getElementsByClassName('needs-validation');
-                                // Loop over them and prevent submission
-                                var validation = Array.prototype.filter.call(forms, function(form) {
-                                    form.addEventListener('submit', function(event) {
-                                        if (form.checkValidity() === false) {
-                                            event.preventDefault();
-                                            event.stopPropagation();
-                                        }
-                                        form.classList.add('was-validated');
-                                       location.href = "MisHerramientas.html"
-                                    }, false);
-                                });
-                            }, false);
-                        })();
-                    </script>
+                    <button type="button" id="log">log</button>
                 </div>
             </div>
 
@@ -129,10 +109,64 @@
 <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/contact.js"></script>
 <script type="text/javascript" src="js/validator.js"></script>
-<script type="text/javascript" src="js/countdown.js"></script>
 <script type="text/javascript" src="js/particles.min.js"></script>
 <script type="text/javascript" src="js/particles_2.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
 
+
+<script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function() {
+        'use strict';
+        window.addEventListener('load', function() {
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.getElementsByClassName('needs-validation');
+            // Loop over them and prevent submission
+            var validation = Array.prototype.filter.call(forms, function(form) {
+                form.addEventListener('submit', function(event) {
+                    if (form.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            });
+        }, false);
+    })();
+</script>
+
+<script type="application/javascript">
+
+
+    function GuardarDatos() {
+        let text = '{ "Usuarios" : [' +
+                '{ "Usuario":"John" , "Password":"Doe" },' +
+                '{ "Usuario":"Anna" , "Password":"Smith" },' +
+                '{ "Usuario":"Peter" , "Password":"Jones" } ]}';
+
+
+        sessionStorage.setItem("dbUsuario", JSON.stringify(text));
+    }
+    function obtenerdato() {
+        let dato =  JSON.parse(sessionStorage.getItem("dbUsuario"));
+       return dato;
+    }
+    GuardarDatos();
+    obtenerdato();
+
+
+    let text = obtenerdato()
+
+
+
+    var map = new Map(Object.entries(JSON.parse(text)));
+    console.log(map);
+    const iterator1 = map.values();
+
+    console.log(iterator1.next().value[1].Usuario);
+
+
+</script>
 </body>
 </html>
