@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="css/font_awesome.css">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
 
 </head>
@@ -50,17 +50,17 @@
         <div class="container">
 
             <div class="row justify-content-between align-items-center">
-                <div class="col-4 ">
-                    <span style="text-align: right; color: #EEEEEE; font-weight: bold; font-size: 90px;">Tintorerias</span>
+                <div class="col-6 ">
+                    <span style="text-align: right; color: #EEEEEE;"><h1>Tintorerias</h1></span>
 
                 </div>
-                <div class="col-4">
-                    <p><h2 class="limpiot">LIMPIO</h2></p>
+                <div class="col-6">
+                   <span class="limpiot"><h2 >LIMPIO</h2></span>
                 </div>
             </div>
             <br><br><br><br>
             <div class="row justify-content-center align-items-center" style="background-color: #005BEA">
-                <div class="col-7">
+                <div class="col-7" style="padding-left: 0px;">
                     <img src="resources/img/img-access.png" class="img-responsive" style="width:100%" alt="Image">
                 </div>
                 <div class="col-5"  >
@@ -73,7 +73,7 @@
                                         <span class="input-group-text" id="inputGroupPrepend"><i class="fa fa-user" aria-hidden="true"></i></span>
                                     </div>
                                     <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
-                                    <div class="invalid-feedback">
+                                    <div class="invalid-feedback alert alert-danger">
                                         Porfavor introduce tu nombre de usuario
                                     </div>
                                 </div>
@@ -85,18 +85,17 @@
                                         <span class="input-group-text" id="inputGroupPrepend"><i class="fa fa-unlock-alt" aria-hidden="true"></i></span>
                                     </div>
                                     <input type="text" class="form-control" id="validationCustomPassword" placeholder="Password" aria-describedby="inputGroupPrepend" required>
-                                    <div class="invalid-feedback">
+                                    <div class="invalid-feedback alert alert-danger">
                                         Porfavor introduce tu contraseña
                                     </div>
                                 </div>
                             </div>
                         <div style="text-align: center">
                         <button class="btn btn-primary btn-cdi" type="button">Registro <i class="fa fa-user-plus" aria-hidden="true"></i></button>
-                        <button class="btn btn-primary btn-cdi" type="submit">Entrar <i class="fa fa-sign-in" aria-hidden="true"></i></button>
+                        <button class="btn btn-primary btn-cdi" type="submit">Entrar AQUI <i class="fa fa-sign-in" aria-hidden="true"></i></button>
 
                         </div>
                     </form>
-                    <button type="button" id="log">log</button>
                 </div>
             </div>
 
@@ -106,65 +105,21 @@
 </div>
 
 <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
-<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/contact.js"></script>
-<script type="text/javascript" src="js/validator.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/particles.min.js"></script>
 <script type="text/javascript" src="js/particles_2.js"></script>
-<script type="text/javascript" src="js/script.js"></script>
-
-
+<script type="text/javascript" src="js/utils.js"></script>
+<script type="text/javascript" src="js/dbaccesso.js"></script>
 <script>
-    // Example starter JavaScript for disabling form submissions if there are invalid fields
-    (function() {
-        'use strict';
-        window.addEventListener('load', function() {
-            // Fetch all the forms we want to apply custom Bootstrap validation styles to
-            var forms = document.getElementsByClassName('needs-validation');
-            // Loop over them and prevent submission
-            var validation = Array.prototype.filter.call(forms, function(form) {
-                form.addEventListener('submit', function(event) {
-                    if (form.checkValidity() === false) {
-                        event.preventDefault();
-                        event.stopPropagation();
-
-                    }
-                    form.classList.add('was-validated');
-                }, false);
-            });
-        }, false);
-    })();
-</script>
-
-<script type="application/javascript">
-
-
-    function GuardarDatos() {
-        let text = '{ "Usuarios" : [' +
-                '{ "Usuario":"John" , "Password":"Doe" },' +
-                '{ "Usuario":"Anna" , "Password":"Smith" },' +
-                '{ "Usuario":"Peter" , "Password":"Jones" } ]}';
-
-
-        sessionStorage.setItem("dbUsuario", JSON.stringify(text));
+    function obtenerdatos(tbl_name) {
+        let dato =  JSON.parse(sessionStorage.getItem(tbl_name));
+        return dato;
     }
-    function obtenerdato() {
-        let dato =  JSON.parse(sessionStorage.getItem("dbUsuario"));
-       return dato;
-    }
-    GuardarDatos();
-    obtenerdato();
 
+    let User = obtenerdatos("db_usuarios");
+    console.log(User[0].Usuarios[1]);
 
-    let text = obtenerdato()
-
-
-
-    var map = new Map(Object.entries(JSON.parse(text)));
-    console.log(map);
-    const iterator1 = map.values();
-
-    console.log(iterator1.next().value[1].Usuario);
+    console.log(User[0].Usuarios[1].DNI);
 
 
 </script>

@@ -53,15 +53,18 @@
 }
 
 .limpiot {
+
+    display: block;
     font-weight:bold;padding: 5px; background-color: white;color: #4f40ff; border-radius: 5px;
     text-align: center;
-    padding-left: 20px;
-    padding-right: 20px;
+    width: 50%;
     font-size: 5vw;
 }
 
 .btn-cdi {
-    background-color: #948BB7;
+    background: rgb(107,135,183);
+    background: linear-gradient(90deg, rgba(107,135,183,0) 0%, rgba(107,135,183,0) 53%, rgba(107,135,183,0) 100%);
+    border: 2px solid #6B87B7;
 
 }
 
