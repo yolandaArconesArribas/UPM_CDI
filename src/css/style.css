@@ -152,6 +152,11 @@ background-color: #98CE00;
 .guardar i {
     color: #0097A7;
 }
+
+.aceptarOK i {
+    color: #98CE00;
+}
+
 .fixed-table-toolbar {
 
     background-color: #1155CC !important;

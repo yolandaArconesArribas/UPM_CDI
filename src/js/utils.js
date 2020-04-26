@@ -168,3 +168,76 @@ var dato_HistorialAvisosEnviados = [
         "email": "evefischer@klugger.com"
     }
 ];
+
+var data_encargado = [
+    {
+        "_id": "5ea6069f82c5e88a71f46d00",
+        "Nombre": "Giles",
+        "Apellido": "Sullivan",
+        "DNI": "67081104C",
+        "Pass": 1234
+    },
+    {
+        "_id": "5ea6069f3e72849d256cef74",
+        "Nombre": "Klein",
+        "Apellido": "Roach",
+        "DNI": "4995579S",
+        "Pass": 1234
+    },
+    {
+        "_id": "5ea6069f4184a1e584747e25",
+        "Nombre": "Walsh",
+        "Apellido": "Reilly",
+        "DNI": "70561881S",
+        "Pass": 1234
+    },
+    {
+        "_id": "5ea6069f968bced6cdd9f812",
+        "Nombre": "Navarro",
+        "Apellido": "Hodges",
+        "DNI": "61720830S",
+        "Pass": 1234
+    },
+    {
+        "_id": "5ea6069f5a2ceb57538e8d5f",
+        "Nombre": "Jillian",
+        "Apellido": "Anderson",
+        "DNI": "15802203C",
+        "Pass": 1234
+    },
+    {
+        "_id": "5ea6069f01f8c6b2afec6b75",
+        "Nombre": "Vincent",
+        "Apellido": "Dickson",
+        "DNI": "89987783T",
+        "Pass": 1234
+    },
+    {
+        "_id": "5ea6069f44f7f649134a7234",
+        "Nombre": "Kristy",
+        "Apellido": "Santana",
+        "DNI": "85933887T",
+        "Pass": 1234
+    },
+    {
+        "_id": "5ea6069f28021f2dbc06ec5c",
+        "Nombre": "Potts",
+        "Apellido": "James",
+        "DNI": "17121879A",
+        "Pass": 1234
+    },
+    {
+        "_id": "5ea6069f300d2ed02271bbce",
+        "Nombre": "Natalie",
+        "Apellido": "Sloan",
+        "DNI": "85638267A",
+        "Pass": 1234
+    },
+    {
+        "_id": "5ea6069fd02ecd4530cc3872",
+        "Nombre": "Chan",
+        "Apellido": "Odonnell",
+        "DNI": "39718052A",
+        "Pass": 1234
+    }
+];

@@ -113,11 +113,15 @@
 <script type="text/javascript" src="js/dbaccesso.js"></script>
 <script>
 
-    let User = obtenerdatos("db_usuarios");
-    console.log(User[0].DNI);
+    let User = obtenerdatos("db_encargado");
 
 
 
+    var USERNAME = User[0].DNI;
+    var PASSWORD = User[0].Pass;
+
+    console.log(USERNAME);
+    console.log(PASSWORD);
 
 </script>
 </body>
