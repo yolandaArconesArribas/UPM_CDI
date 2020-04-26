@@ -1,126 +1,170 @@
-var data_user = [
+var data_user =[
     {
-        "Usuarios": [
-            {
-                "_id": "5ea44db0d23027d697f458b7",
-                "Nombre": "Wright",
-                "Apellido": "Love",
-                "DNI": "26434958S",
-                "CodigoPostal": 1875,
-                "Localidad": "Moncloa",
-                "Telefono": "+34 (856) 511-2931",
-                "Email": "wrightlove@hawkster.com",
-                "TarjetaFidelizacion": "9713T",
-                "PuntosAcumulados": 415
-            },
-            {
-                "_id": "5ea44db03554332a4968c425",
-                "Nombre": "Sears",
-                "Apellido": "Hill",
-                "DNI": "12642470S",
-                "CodigoPostal": 1552,
-                "Localidad": "Moncloa",
-                "Telefono": "+34 (873) 453-3979",
-                "Email": "searshill@hawkster.com",
-                "TarjetaFidelizacion": "2372B",
-                "PuntosAcumulados": 53
-            },
-            {
-                "_id": "5ea44db091bbfbb117afd6c3",
-                "Nombre": "Rowena",
-                "Apellido": "Richard",
-                "DNI": "35819135T",
-                "CodigoPostal": 1589,
-                "Localidad": "Madrid",
-                "Telefono": "+34 (889) 449-2390",
-                "Email": "rowenarichard@hawkster.com",
-                "TarjetaFidelizacion": "3744A",
-                "PuntosAcumulados": 130
-            },
-            {
-                "_id": "5ea44db0283f962615c22e33",
-                "Nombre": "Lewis",
-                "Apellido": "Clarke",
-                "DNI": "44586078A",
-                "CodigoPostal": 1193,
-                "Localidad": "Aravaca",
-                "Telefono": "+34 (866) 488-2559",
-                "Email": "lewisclarke@hawkster.com",
-                "TarjetaFidelizacion": "8705C",
-                "PuntosAcumulados": 17
-            },
-            {
-                "_id": "5ea44db02d4a6f60d31dada4",
-                "Nombre": "Tiffany",
-                "Apellido": "Park",
-                "DNI": "98334656T",
-                "CodigoPostal": 1266,
-                "Localidad": "Atocha",
-                "Telefono": "+34 (847) 585-3964",
-                "Email": "tiffanypark@hawkster.com",
-                "TarjetaFidelizacion": "5637T",
-                "PuntosAcumulados": 3
-            },
-            {
-                "_id": "5ea44db0295a115b38c5d7fc",
-                "Nombre": "Josephine",
-                "Apellido": "Gordon",
-                "DNI": "48393394B",
-                "CodigoPostal": 1589,
-                "Localidad": "Majadahonda",
-                "Telefono": "+34 (899) 597-3018",
-                "Email": "josephinegordon@hawkster.com",
-                "TarjetaFidelizacion": "5624A",
-                "PuntosAcumulados": 3
-            },
-            {
-                "_id": "5ea44db03af9d28a10d37ceb",
-                "Nombre": "Katharine",
-                "Apellido": "Ford",
-                "DNI": "21482528T",
-                "CodigoPostal": 1227,
-                "Localidad": "Madrid",
-                "Telefono": "+34 (889) 460-3170",
-                "Email": "katharineford@hawkster.com",
-                "TarjetaFidelizacion": "9428S",
-                "PuntosAcumulados": 196
-            },
-            {
-                "_id": "5ea44db0a3fa3bb258b7338b",
-                "Nombre": "Eleanor",
-                "Apellido": "Barber",
-                "DNI": "55512820B",
-                "CodigoPostal": 1241,
-                "Localidad": "Aravaca",
-                "Telefono": "+34 (865) 573-2168",
-                "Email": "eleanorbarber@hawkster.com",
-                "TarjetaFidelizacion": "6874B",
-                "PuntosAcumulados": 104
-            },
-            {
-                "_id": "5ea44db0608ac69848646329",
-                "Nombre": "Liz",
-                "Apellido": "Macias",
-                "DNI": "63555279T",
-                "CodigoPostal": 1418,
-                "Localidad": "Majadahonda",
-                "Telefono": "+34 (866) 599-3200",
-                "Email": "lizmacias@hawkster.com",
-                "TarjetaFidelizacion": "5715A",
-                "PuntosAcumulados": 382
-            },
-            {
-                "_id": "5ea44db02a9e3a345590a0f2",
-                "Nombre": "Arlene",
-                "Apellido": "Beard",
-                "DNI": "74389872B",
-                "CodigoPostal": 1686,
-                "Localidad": "Atocha",
-                "Telefono": "+34 (822) 597-3700",
-                "Email": "arlenebeard@hawkster.com",
-                "TarjetaFidelizacion": "9257S",
-                "PuntosAcumulados": 7
-            }
-        ]
+        "_id": "5ea5bf4b75ed77a33d388c52",
+        "Nombre": "Justice",
+        "Apellido": "Nielsen",
+        "DNI": "16125710B",
+        "CodigoPostal": 1562,
+        "Localidad": "Madrid",
+        "Telefono": "+34 (896) 511-2166",
+        "Email": "justicenielsen@opticon.com",
+        "TarjetaFidelizacion": "6495B",
+        "PuntosAcumulados": 447
+    },
+    {
+        "_id": "5ea5bf4bef00187bfe567034",
+        "Nombre": "Haley",
+        "Apellido": "Joyce",
+        "DNI": "22703972A",
+        "CodigoPostal": 1195,
+        "Localidad": "Aravaca",
+        "Telefono": "+34 (873) 522-3476",
+        "Email": "haleyjoyce@opticon.com",
+        "TarjetaFidelizacion": "3768A",
+        "PuntosAcumulados": 229
+    },
+    {
+        "_id": "5ea5bf4b1c2e34c5a81214a1",
+        "Nombre": "Lott",
+        "Apellido": "Bryant",
+        "DNI": "86267608B",
+        "CodigoPostal": 1588,
+        "Localidad": "Vallecas",
+        "Telefono": "+34 (818) 414-3563",
+        "Email": "lottbryant@opticon.com",
+        "TarjetaFidelizacion": "4191S",
+        "PuntosAcumulados": 26
+    },
+    {
+        "_id": "5ea5bf4b96b0055b40791bce",
+        "Nombre": "Marta",
+        "Apellido": "Crane",
+        "DNI": "90955272A",
+        "CodigoPostal": 1022,
+        "Localidad": "Majadahonda",
+        "Telefono": "+34 (810) 466-2696",
+        "Email": "martacrane@opticon.com",
+        "TarjetaFidelizacion": "7610T",
+        "PuntosAcumulados": 336
+    },
+    {
+        "_id": "5ea5bf4b349587fc9f5da19f",
+        "Nombre": "Farmer",
+        "Apellido": "Kerr",
+        "DNI": "57805266C",
+        "CodigoPostal": 1497,
+        "Localidad": "Aravaca",
+        "Telefono": "+34 (857) 477-2490",
+        "Email": "farmerkerr@opticon.com",
+        "TarjetaFidelizacion": "9389S",
+        "PuntosAcumulados": 277
+    },
+    {
+        "_id": "5ea5bf4b5d16b2f579a57d73",
+        "Nombre": "Kaitlin",
+        "Apellido": "Weaver",
+        "DNI": "27170864A",
+        "CodigoPostal": 1943,
+        "Localidad": "Majadahonda",
+        "Telefono": "+34 (930) 513-2971",
+        "Email": "kaitlinweaver@opticon.com",
+        "TarjetaFidelizacion": "8793B",
+        "PuntosAcumulados": 25
+    },
+    {
+        "_id": "5ea5bf4be83b270905789156",
+        "Nombre": "Jennie",
+        "Apellido": "Cardenas",
+        "DNI": "8823356T",
+        "CodigoPostal": 1314,
+        "Localidad": "Vallecas",
+        "Telefono": "+34 (932) 484-3436",
+        "Email": "jenniecardenas@opticon.com",
+        "TarjetaFidelizacion": "1334S",
+        "PuntosAcumulados": 393
+    },
+    {
+        "_id": "5ea5bf4b9f41e28466099340",
+        "Nombre": "Therese",
+        "Apellido": "Crawford",
+        "DNI": "4466549S",
+        "CodigoPostal": 1481,
+        "Localidad": "Atocha",
+        "Telefono": "+34 (871) 504-3368",
+        "Email": "theresecrawford@opticon.com",
+        "TarjetaFidelizacion": "2687T",
+        "PuntosAcumulados": 423
+    },
+    {
+        "_id": "5ea5bf4b40e562c3cc7d6a5f",
+        "Nombre": "Winifred",
+        "Apellido": "Bush",
+        "DNI": "79346971A",
+        "CodigoPostal": 1389,
+        "Localidad": "Atocha",
+        "Telefono": "+34 (908) 503-2294",
+        "Email": "winifredbush@opticon.com",
+        "TarjetaFidelizacion": "4844B",
+        "PuntosAcumulados": 135
+    },
+    {
+        "_id": "5ea5bf4b617acc69414b8e5a",
+        "Nombre": "Carey",
+        "Apellido": "Blackwell",
+        "DNI": "22183199A",
+        "CodigoPostal": 1069,
+        "Localidad": "Majadahonda",
+        "Telefono": "+34 (990) 427-2684",
+        "Email": "careyblackwell@opticon.com",
+        "TarjetaFidelizacion": "2481C",
+        "PuntosAcumulados": 410
+    }
+];
+
+var dato_HistorialAvisosEnviados = [
+    {
+        "index": 0,
+        "guid": "61c247db-5310-4a43-b682-8bdcf5804787",
+        "Aviso": "Plus Limpieza",
+        "Estado": "Aprobado",
+        "Enviado": "Si",
+        "name": "Tanya Alvarez",
+        "email": "tanyaalvarez@klugger.com"
+    },
+    {
+        "index": 1,
+        "guid": "039e3c85-426c-485b-963e-51b9867fb242",
+        "Aviso": "Desperfecto roto",
+        "Estado": "Aprobado",
+        "Enviado": "No",
+        "name": "Ashley Bridges",
+        "email": "ashleybridges@klugger.com"
+    },
+    {
+        "index": 2,
+        "guid": "1dcd1be7-6868-409b-a8fd-70b04fb9ca29",
+        "Aviso": "Presepuesto",
+        "Estado": "Denegado",
+        "Enviado": "No",
+        "name": "Simpson Burris",
+        "email": "simpsonburris@klugger.com"
+    },
+    {
+        "index": 3,
+        "guid": "fc4bb5d5-d33a-4be9-9223-2bf6b8a5573b",
+        "Aviso": "Desperfecto roto",
+        "Estado": "Aprobado",
+        "Enviado": "No",
+        "name": "Beck Holloway",
+        "email": "beckholloway@klugger.com"
+    },
+    {
+        "index": 4,
+        "guid": "49958256-8e06-4c6f-b318-525dd939f99e",
+        "Aviso": "Presepuesto",
+        "Estado": "Aprobado",
+        "Enviado": "Si",
+        "name": "Eve Fischer",
+        "email": "evefischer@klugger.com"
     }
 ];

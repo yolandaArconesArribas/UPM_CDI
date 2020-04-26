@@ -108,18 +108,15 @@
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/particles.min.js"></script>
 <script type="text/javascript" src="js/particles_2.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
 <script type="text/javascript" src="js/utils.js"></script>
 <script type="text/javascript" src="js/dbaccesso.js"></script>
 <script>
-    function obtenerdatos(tbl_name) {
-        let dato =  JSON.parse(sessionStorage.getItem(tbl_name));
-        return dato;
-    }
 
     let User = obtenerdatos("db_usuarios");
-    console.log(User[0].Usuarios[1]);
+    console.log(User[0].DNI);
 
-    console.log(User[0].Usuarios[1].DNI);
+
 
 
 </script>

@@ -106,7 +106,6 @@
 <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/contact.js"></script>
 <script type="text/javascript" src="js/validator.js"></script>
 <script type="text/javascript" src="js/particles.min.js"></script>
 <script type="text/javascript" src="js/particles_2.js"></script>
@@ -115,85 +114,17 @@
 <script src="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.js"></script>
 <script src="https://unpkg.com/bootstrap-table@1.16.0/dist/extensions/toolbar/bootstrap-table-toolbar.min.js"></script>
 <script src="https://unpkg.com/bootstrap-table@1.16.0/dist/extensions/filter-control/bootstrap-table-filter-control.min.js"></script>
+
+
+<script type="text/javascript" src="js/utils.js"></script>
+<script type="text/javascript" src="js/dbaccesso.js"></script>
+
+
 <script>
-    var $table = $('#table')
+    var $table = $('#table');
 
     $(function() {
-
-        var datos = [
-            {
-                "index": 0,
-                "guid": "61c247db-5310-4a43-b682-8bdcf5804787",
-                "Aviso": "Plus Limpieza",
-                "Estado": "Aprobado",
-                "Enviado": "Si",
-                "name": "Tanya Alvarez",
-                "email": "tanyaalvarez@klugger.com"
-            },
-            {
-                "index": 1,
-                "guid": "039e3c85-426c-485b-963e-51b9867fb242",
-                "Aviso": "Desperfecto roto",
-                "Estado": "Aprobado",
-                "Enviado": "No",
-                "name": "Ashley Bridges",
-                "email": "ashleybridges@klugger.com"
-            },
-            {
-                "index": 2,
-                "guid": "1dcd1be7-6868-409b-a8fd-70b04fb9ca29",
-                "Aviso": "Presepuesto",
-                "Estado": "Denegado",
-                "Enviado": "No",
-                "name": "Simpson Burris",
-                "email": "simpsonburris@klugger.com"
-            },
-            {
-                "index": 3,
-                "guid": "fc4bb5d5-d33a-4be9-9223-2bf6b8a5573b",
-                "Aviso": "Desperfecto roto",
-                "Estado": "Aprobado",
-                "Enviado": "No",
-                "name": "Beck Holloway",
-                "email": "beckholloway@klugger.com"
-            },
-            {
-                "index": 4,
-                "guid": "49958256-8e06-4c6f-b318-525dd939f99e",
-                "Aviso": "Presepuesto",
-                "Estado": "Aprobado",
-                "Enviado": "Si",
-                "name": "Eve Fischer",
-                "email": "evefischer@klugger.com"
-            }
-        ];
-
-        function GuardarDatos(TBL_name,data) {
-
-            sessionStorage.setItem(TBL_name, JSON.stringify(data));
-        }
-        function obtenerdato() {
-            let dato =  JSON.parse(sessionStorage.getItem("TBL_Avisos"));
-            return dato;
-        }
-
-
-        GuardarDatos("TBL_Avisos", datos);
-        obtenerdato();
-
-
-        let data = obtenerdato();
-
-
-/*
-        var map = new Map(Object.entries(JSON.parse(text)));
-        console.log(map);
-        const iterator1 = map.values();
-
-        console.log(iterator1.next().value[1].Usuario);
-
-*/
-
+        let data = obtenerdatos("db_HistorialAvisosEnviados");
         console.log(data);
         $table.bootstrapTable({data: data})
     })
