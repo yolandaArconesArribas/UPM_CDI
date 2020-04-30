@@ -72,14 +72,15 @@
                                data-click-to-select="true"
                                data-filter-control="true"
                                data-page-size="5"
+                               data-sort-order="desc"
                         >
                             <thead>
                             <tr>
                                 <th data-checkbox="true"></th>
-                                <th data-field="Codigo" data-filter-control="input">Codigo </th>
+                                <th data-field="Codigo" data-filter-control="input" data-sortable="true">Codigo </th>
                                 <th data-field="Prenda"data-filter-control="input" >Prenda</th>
                                 <th data-field="Descripcion"data-filter-control="input" >Descripcion</th>
-                                <th data-field="Precio"data-filter-control="input" >Precio</th>
+                                <th data-field="Precio"data-filter-control="input" data-sortable="true" >Precio</th>
                             </tr>
                             </thead>
                         </table>
@@ -91,11 +92,11 @@
             </div>
 
             <br><br>
-            <div class="row justify-content-center">
-                <div class="col-5">
+            <div class="row justify-content-center" style="text-align: center">
+                <div class="col-12">
                     <button class="btn btn-default btn-cdi-action"> <i class="fa fa-arrow-circle-left" aria-hidden="true"></i> Volver </button>
                     <button id="modalbuttonprod" class="btn btn-default btn-cdi-action" data-toggle="modal" data-target="#exampleModalCenter" disabled><i class="fa fa-trash" aria-hidden="true" ></i> Eliminar </button>
-                    <button class="btn btn-default btn-cdi-action">  <i class="fa fa-floppy-o" aria-hidden="true"></i>  Guardar</button>
+                    <button class="btn btn-default btn-cdi-action" data-toggle="modal" data-target="#exampleModalCenter3"aria-hidden="true">  <i class="fa fa-floppy-o"  ></i>  Agregar Producto</button>
                 </div>
             </div>
 
@@ -115,7 +116,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                ¿Está seguro que desea eliminar los clientes seleccionados?
+                ¿Está seguro que desea eliminar los productos seleccionados?
             </div>
             <div class="modal-footer">
 
@@ -127,6 +128,59 @@
         </div>
     </div>
 </div>
+<div class="modal fade" id="exampleModalCenter3" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle3" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content" >
+            <div class="modal-header" >
+                <h2 class="modal-title aceptarOK " id="exampleModalLongTitle2"> <i class=" fa fa-archive" aria-hidden="true"></i> Agregar Producto</h2>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1"><strong>Prenda</strong></label>
+                        <input type="text" class="form-control" id="ValPrenda" placeholder="Prenda">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1"><strong>Descripcion</strong></label>
+                        <input type="text" class="form-control" id="ValDescripcion" placeholder="Descripcion">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1"><strong>Precio</strong></label>
+                        <input type="text" class="form-control" id="ValPrecio" placeholder="Precio">
+                    </div>
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-default btn-cdi-action cancelar" data-dismiss="modal"><i class="fa fa-times" aria-hidden="true"></i> Cancelar </button>
+                <button class="btn btn-default btn-cdi-action aceptarOK" data-toggle="modal" data-target="#exampleModalCenter2"aria-hidden="true">  <i class="fa fa-check" aria-hidden="true"></i> Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle2" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content" style="text-align: center !important;">
+            <div class="modal-header" >
+                <h2 class="modal-title aceptarOK " id="exampleModalLongTitle2"> <i class=" fa fa-archive" aria-hidden="true"></i> Agregar Producto</h2>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" style="text-align: center !important;">
+               Los datos del producto se han guardado correctamente
+            </div>
+            <div class="modal-footer">
+                <button id="saveProducto"  class="btn btn-default btn-cdi-action aceptarOK" data-dismiss="modal">  <i class="fa fa-check" aria-hidden="true"></i> Aceptar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 
 
 <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
@@ -177,6 +231,24 @@
             $('#exampleModalCenter').modal('hide');
             $remove.prop('disabled', true)
             $modalbuttonprod.prop('disabled', true)
+        })
+    })
+
+
+    var $button = $('#saveProducto')
+
+    $(function() {
+        $button.click(function () {
+            var randomId = 100 + ~~(Math.random() * 100)
+            $table.bootstrapTable('insertRow', {
+                index: 1,
+                row: {
+                    Codigo: randomId,
+                    Prenda: $("#ValPrenda").val(),
+                    Descripcion: $("#ValDescripcion").val(),
+                    Precio: $("#ValDescripcion").val()
+                }
+            })
         })
     })
 </script>

@@ -164,3 +164,11 @@ background-color: #98CE00;
 .boltcolor {
     color: #FFAB40;
 }
+
+.modal:nth-of-type(even) {
+    z-index: 1052 !important;
+}
+.modal-backdrop.show:nth-of-type(even) {
+    z-index: 1051 !important;
+}
+
