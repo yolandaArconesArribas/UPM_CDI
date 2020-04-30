@@ -68,10 +68,12 @@
                                data-click-to-select="true"
                                data-filter-control="true"
                                data-page-size="5"
+
+                               data-unique-id="NumeroPedido"
                         >
                             <thead>
                             <tr>
-                                <th data-checkbox="true"></th>
+                                <th data-radio="true"></th>
                                 <th data-field="NumeroPedido" data-filter-control="input">NumeroPedido </th>
                                 <th data-field="Fentrada"data-filter-control="input" >Fentrada</th>
                                 <th data-field="Cliente"data-filter-control="input" >Cliente</th>
@@ -90,18 +92,85 @@
             </div>
 
 
-            <div class="row justify-content-center" style="margin-top: 20px">
-              <div class="col-5">
-                  <button class="btn btn-default btn-cdi-action"> <i class="fa fa-arrow-circle-left" aria-hidden="true"></i> Volver </button>
-                  <button id="remove" class="btn btn-default btn-cdi-action" disabled><i class="fa fa-trash" aria-hidden="true"></i> Eliminar </button>
-                  <button class="btn btn-default btn-cdi-action">  <i class="fa fa-floppy-o" aria-hidden="true"></i>  Guardar</button>
-              </div>
+            <div class="row justify-content-center" style="text-align: center; margin-top: 20px">
+                <div class="col-12">
+                    <button class="btn btn-default btn-cdi-action"> <i class="fa fa-arrow-circle-left" aria-hidden="true"></i> Volver </button>
+                    <button id="modalbuttonprod" class="btn btn-default btn-cdi-action" data-toggle="modal" data-target="#exampleModalCenter" disabled><i class="fa fa-trash" aria-hidden="true" ></i> Eliminar </button>
+                    <button id="ObtenerDatos" class="btn btn-default btn-cdi-action" data-toggle="modal" data-target="#exampleModalCenter3"aria-hidden="true" disabled>  <i class="fa fa-floppy-o"  ></i>  Cambiar Estado</button>
+                </div>
             </div>
 
         </div>
     </div>
 
 </div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title cancelar" id="exampleModalLongTitle"> <i class="fa fa-user-times" aria-hidden="true"></i> Eliminar Historial</h2>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                ¿Está seguro que desea eliminar los historiales seleccionados?
+            </div>
+            <div class="modal-footer">
+
+
+
+                <button class="btn btn-default btn-cdi-action cancelar" data-dismiss="modal"><i class="fa fa-times" aria-hidden="true"></i> Cancelar </button>
+                <button id="remove"  class="btn btn-default btn-cdi-action aceptarOK">  <i class="fa fa-check" aria-hidden="true"></i> Aceptar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="exampleModalCenter3" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle3" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content" >
+            <div class="modal-header" >
+                <h2 class="modal-title aceptarOK " id="exampleModalLongTitle2"> <i class=" fa fa-archive" aria-hidden="true"></i> Cambiar estado de la prenda</h2>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1"><strong>Nuevo Estado</strong></label>
+                        <input type="text" class="form-control" id="ValEstado" placeholder="Estado">
+                    </div>
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-default btn-cdi-action cancelar" data-dismiss="modal"><i class="fa fa-times" aria-hidden="true"></i> Cancelar </button>
+                <button class="btn btn-default btn-cdi-action aceptarOK" data-toggle="modal" data-target="#exampleModalCenter2"aria-hidden="true">  <i class="fa fa-check" aria-hidden="true"></i> Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle2" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content" style="text-align: center !important;">
+            <div class="modal-header" >
+                <h2 class="modal-title aceptarOK " id="exampleModalLongTitle2"> <i class=" fa fa-archive" aria-hidden="true"></i> Cambiar estado de la prenda</h2>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" style="text-align: center !important;">
+                Los datos del estado se han guardado correctamente
+            </div>
+            <div class="modal-footer">
+                <button id="saveProducto"  class="btn btn-default btn-cdi-action aceptarOK" data-dismiss="modal">  <i class="fa fa-check" aria-hidden="true"></i> Aceptar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
@@ -122,7 +191,8 @@
 
 <script>
     var $table = $('#table');
-
+    var $modalbuttonprod = $('#modalbuttonprod');
+    var $varObtenerDatos = $('#ObtenerDatos');
     $(function() {
         let data = obtenerdatos("HistorialPedidos");
         console.log(data);
@@ -175,6 +245,8 @@
     $(function() {
         $table.on('check.bs.table uncheck.bs.table check-all.bs.table uncheck-all.bs.table', function () {
             $remove.prop('disabled', !$table.bootstrapTable('getSelections').length)
+            $modalbuttonprod.prop('disabled', !$table.bootstrapTable('getSelections').length)
+            $varObtenerDatos.prop('disabled', !$table.bootstrapTable('getSelections').length)
         });
 
         $remove.click(function () {
@@ -186,7 +258,37 @@
                 field: 'NumeroPedido',
                 values: ids
             })
+            $('#exampleModalCenter').modal('hide');
             $remove.prop('disabled', true)
+            $modalbuttonprod.prop('disabled', true)
+            $varObtenerDatos.prop('disabled', true)
+        })
+    })
+
+
+    var $button = $('#ObtenerDatos')
+    var $button2 = $('#saveProducto')
+    $(function() {
+        $button.click(function () {
+
+
+
+            $(function() {
+                $button2.click(function () {
+                    var CambiarEstado = $table.bootstrapTable('getAllSelections');
+                    $table.bootstrapTable('updateCell', {
+                        index: CambiarEstado[0].NumeroPedido,
+
+
+                        field: 'Estado',
+                        value: $("#ValEstado").val()
+
+                    });
+
+                })
+            })
+
+
         })
     })
 </script>
