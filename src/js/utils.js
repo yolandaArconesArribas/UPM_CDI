@@ -123,49 +123,46 @@ var data_user =[
 
 var dato_HistorialAvisosEnviados = [
     {
-        "index": 0,
-        "guid": "61c247db-5310-4a43-b682-8bdcf5804787",
+        "NumeroPedido": 0,
         "Aviso": "Plus Limpieza",
-        "Estado": "Aprobado",
-        "Enviado": "Si",
-        "name": "Tanya Alvarez",
-        "email": "tanyaalvarez@klugger.com"
-    },
-    {
-        "index": 1,
-        "guid": "039e3c85-426c-485b-963e-51b9867fb242",
-        "Aviso": "Desperfecto roto",
-        "Estado": "Aprobado",
-        "Enviado": "No",
-        "name": "Ashley Bridges",
-        "email": "ashleybridges@klugger.com"
-    },
-    {
-        "index": 2,
-        "guid": "1dcd1be7-6868-409b-a8fd-70b04fb9ca29",
-        "Aviso": "Presepuesto",
         "Estado": "Denegado",
-        "Enviado": "No",
-        "name": "Simpson Burris",
-        "email": "simpsonburris@klugger.com"
+        "Enviado": "si"
     },
     {
-        "index": 3,
-        "guid": "fc4bb5d5-d33a-4be9-9223-2bf6b8a5573b",
+        "NumeroPedido": 1,
         "Aviso": "Desperfecto roto",
         "Estado": "Aprobado",
-        "Enviado": "No",
-        "name": "Beck Holloway",
-        "email": "beckholloway@klugger.com"
+        "Enviado": "si"
     },
     {
-        "index": 4,
-        "guid": "49958256-8e06-4c6f-b318-525dd939f99e",
+        "NumeroPedido": 2,
+        "Aviso": "Plus Limpieza",
+        "Estado": "Denegado",
+        "Enviado": "no"
+    },
+    {
+        "NumeroPedido": 3,
         "Aviso": "Presepuesto",
         "Estado": "Aprobado",
-        "Enviado": "Si",
-        "name": "Eve Fischer",
-        "email": "evefischer@klugger.com"
+        "Enviado": "no"
+    },
+    {
+        "NumeroPedido": 4,
+        "Aviso": "Desperfecto roto",
+        "Estado": "Denegado",
+        "Enviado": "no"
+    },
+    {
+        "NumeroPedido": 5,
+        "Aviso": "Desperfecto roto",
+        "Estado": "Denegado",
+        "Enviado": "si"
+    },
+    {
+        "NumeroPedido": 6,
+        "Aviso": "Pedido Listo para recoger",
+        "Estado": "Denegado",
+        "Enviado": "si"
     }
 ];
 
