@@ -286,3 +286,62 @@ var data_enviaravisos = [
         "Enviado": "no"
     }
 ]
+
+var EnvioFactura = [
+    {
+        "_id": "5eab13d878bbc61ec1bceda3",
+        "Prenda": "Pantalon",
+        "Servicio": "Enseco",
+        "Extras": "Seda",
+        "Arreglos": "Boton",
+        "Precio": "19.5€"
+    },
+    {
+        "_id": "5eab13d8956420971d6ddbc1",
+        "Prenda": "Camisa",
+        "Servicio": "Enseco",
+        "Extras": "Fiesta",
+        "Arreglos": "Boton",
+        "Precio": "19.5€"
+    },
+    {
+        "_id": "5eab13d88dadb09c5a0a8f27",
+        "Prenda": "Camisa",
+        "Servicio": "Completo",
+        "Extras": "Fiesta",
+        "Arreglos": "Bajo",
+        "Precio": "15€"
+    },
+    {
+        "_id": "5eab13d826a328cf24fbb49f",
+        "Prenda": "Camisa",
+        "Servicio": "Tintado",
+        "Extras": "Cuero",
+        "Arreglos": "Bajo",
+        "Precio": "40€"
+    },
+    {
+        "_id": "5eab13d839ad92c6601b3fee",
+        "Prenda": "Pantalon",
+        "Servicio": "Enseco",
+        "Extras": "Fiesta",
+        "Arreglos": " ",
+        "Precio": "40€"
+    },
+    {
+        "_id": "5eab13d8a17d7ad0b14ce25b",
+        "Prenda": "Pantalon",
+        "Servicio": "Enseco",
+        "Extras": "Seda",
+        "Arreglos": "Boton",
+        "Precio": "40€"
+    },
+    {
+        "_id": "5eab13d8b3eef33187b8d871",
+        "Prenda": "Vestido",
+        "Servicio": "Completo",
+        "Extras": "Seda",
+        "Arreglos": "Boton",
+        "Precio": "15€"
+    }
+];

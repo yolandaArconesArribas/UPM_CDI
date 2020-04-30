@@ -25,6 +25,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
 
+    <link href="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.css" rel="stylesheet">
+
 </head>
 <body>
 
@@ -64,7 +66,7 @@
                             <div class="form-group row">
                                 <label for="staticEmail" class="col-sm-2 col-form-label"><span class="form-cdi">Nombre</span></label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" id="validationCustom01" placeholder="First name" value="Mark" required>
+                                    <input type="text" class="form-control" id="validationCustom01" placeholder="Nombre" required>
                                     <div class="valid-feedback">
                                         Looks good!
                                     </div>
@@ -74,16 +76,16 @@
                             <div class="form-group row">
                                 <label for="staticEmail" class="col-sm-2 col-form-label"><span class="form-cdi">DNI</span></label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" id="validationCustom01" placeholder="First name" value="Mark" required>
+                                    <input type="text" class="form-control" id="validationCustom01" placeholder="DNI" required>
                                     <div class="valid-feedback">
                                         Looks good!
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label for="staticEmail" class="col-sm-2 col-form-label"><span class="form-cdi">tarjeta Fidelizacion</span></label>
+                                <label for="staticEmail" class="col-sm-2 col-form-label"><span class="form-cdi">Tarjeta Fidelizacion</span></label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" id="validationCustom01" placeholder="First name" value="Mark" required>
+                                    <input type="text" class="form-control" id="validationCustom01" placeholder="Tarjeta Fidelizacion"  required>
                                     <div class="valid-feedback">
                                         Looks good!
                                     </div>
@@ -92,86 +94,44 @@
                             <div class="form-group row">
                                 <label for="staticEmail" class="col-sm-2 col-form-label"><span class="form-cdi">Canjear Puntos</span></label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" id="validationCustom01" placeholder="First name" value="Mark" required>
+                                    <input type="text" class="form-control" id="validationCustom01" placeholder="Canjear Puntos" required>
                                     <div class="valid-feedback">
                                         Looks good!
                                     </div>
                                 </div>
                             </div>
-                            <table class="table table-bordered table-hover ">
-                                <thead class="thead-dark table-color">
-                                <tr>
-
-                                    <th scope="col" style="text-align: center">Orden</th>
-                                    <th scope="col" style="text-align: center"> Prenda</th>
-                                    <th scope="col" style="text-align: center">Servicio</th>
-                                    <th scope="col" style="text-align: center">Extras</th>
-                                    <th scope="col" style="text-align: center">Arreglos</th>
-                                    <th scope="col" style="text-align: center">Precios</th>
 
 
-                                </tr>
-                                </thead>
-                                <thead class="thead-dark table-color">
-                                <tr>
-
-
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-
-                                    <td style="text-align: center"><input type="checkbox" ></td>
-                                    <td>as</td>
-                                    <td><a href="#">cliente</a></td>
-
-
-                                    <td>
-                                        <div class="dropdown">
-                                            <button class="btn btn-link dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                Entregado
-                                            </button>
-                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                <a class="dropdown-item" href="#">Aprobado <span style="color: #4cae4c"><i class="fa fa-check" aria-hidden="true"></i></span></a>
-                                                <a class="dropdown-item" href="#">Another action</a>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td style="color: #4cae4c"><i class="fa fa-check" aria-hidden="true"></i></td>
-                                </tr>
-
-                                <tr>
-                                    <td style="text-align: center"><input type="checkbox" ></td>
-                                    <td>s</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                    <td>@mdo</td>
-                                    <td>@mdo</td>
-
-                                </tr>
-
-                                </tbody>
-                                <tfoot>
-                                <tr>
-                                    <td colspan="2">Mostrando 1 de 10 entradas</td>
-                                    <td colspan="4" style="text-align: right">
-                                        <a href="">anterior</a>
-                                        <a href="">1</a><a href="">2</a><a href="">3</a><a href="">4</a><a
-                                            href="">5</a>
-                                        <a href="">siguiente</a>
-                                    </td>
-                                </tr>
-                                </tfoot>
-                            </table>
-                            <div class="row justify-content-center" style="text-align: center">
-                                <div class="col-8">
-                                    <button  class="btn btn-default btn-cdi-action "> <i class="fa fa-arrow-circle-left" aria-hidden="true"></i> Volver </button>
-                                    <button type="submit" class="btn btn-default btn-cdi-action guardar">  <i class="fa fa-trash" aria-hidden="true"></i> Eliminar</button>
-                                    <button type="submit" class="btn btn-default btn-cdi-action guardar">  <i class="fa fa-paper-plane" aria-hidden="true"></i>  Enviar Cliente</button>
-                                </div>
-                            </div>
                         </form>
 
+                        <table id="table"
+                               data-pagination="true"
+                               data-data-field="items"
+                               data-checkbox-header="false"
+                               data-click-to-select="true"
+                               data-filter-control="false"
+                               data-page-size="5"
+                        >
+                            <thead>
+                            <tr>
+                                <th data-field="Prenda" data-filter-control="input">Prenda </th>
+                                <th data-field="Servicio"data-filter-control="input" >Servicio</th>
+                                <th data-field="Extras" data-filter-control="input">Extras</th>
+                                <th data-field="Arreglos" data-filter-control="input">Arreglos</th>
+                                <th data-field="Precio" data-filter-control="input">Precio</th>
+                            </tr>
+                            </thead>
+                        </table>
+
+
+
+                        <div class="row justify-content-center" style="text-align: center">
+                            <div class="col-8">
+                                <button  class="btn btn-default btn-cdi-action "> <i class="fa fa-arrow-circle-left" aria-hidden="true"></i> Volver </button>
+                                <button type="submit" class="btn btn-default btn-cdi-action guardar">  <i class="fa fa-trash" aria-hidden="true"></i> Eliminar</button>
+                                <button type="submit" class="btn btn-default btn-cdi-action guardar">  <i class="fa fa-paper-plane" aria-hidden="true"></i>  Enviar Cliente</button>
+                            </div>
+                        </div>
 
                         <script>
                             // Example starter JavaScript for disabling form submissions if there are invalid fields
@@ -209,12 +169,54 @@
 <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/contact.js"></script>
 <script type="text/javascript" src="js/validator.js"></script>
-<script type="text/javascript" src="js/countdown.js"></script>
 <script type="text/javascript" src="js/particles.min.js"></script>
 <script type="text/javascript" src="js/particles_2.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
+
+<script src="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.js"></script>
+<script src="https://unpkg.com/bootstrap-table@1.16.0/dist/extensions/toolbar/bootstrap-table-toolbar.min.js"></script>
+<script src="https://unpkg.com/bootstrap-table@1.16.0/dist/extensions/filter-control/bootstrap-table-filter-control.min.js"></script>
+
+
+<script type="text/javascript" src="js/utils.js"></script>
+<script type="text/javascript" src="js/dbaccesso.js"></script>
+
+<script>
+    var $table = $('#table');
+
+    $(function() {
+        let data = obtenerdatos("EnvioFactura");
+        console.log(data);
+        $table.bootstrapTable({data: data})
+    })
+
+
+    window.operateEvents = {
+        'click .like': function (e, value, row) {
+            alert('ENVIAR ' + value)
+        },
+    }
+
+    function operateFormatter(value, row, index) {
+
+        if (value === "si") {
+            return [
+                '<a class="like letter-cdi letter-cdi-active" href="javascript:void(0)" title="Like" <span class=""><i class="fa fa-envelope-o" aria-hidden="true"></i></span></a>'
+
+            ].join('')
+        }
+        else {
+            return [
+                '<a class="like letter-cdi" href="javascript:void(0)" title="Like" <span class=""><i class="fa fa-envelope-o" aria-hidden="true"></i></span></a>'
+            ].join('')
+        }
+
+
+    }
+
+
+</script>
 
 
 </body>
