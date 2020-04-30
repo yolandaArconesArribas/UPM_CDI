@@ -94,7 +94,7 @@
             <div class="row justify-content-center">
                 <div class="col-5">
                     <button class="btn btn-default btn-cdi-action"> <i class="fa fa-arrow-circle-left" aria-hidden="true"></i> Volver </button>
-                    <button class="btn btn-default btn-cdi-action" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar </button>
+                    <button id="modalbuttonprod" class="btn btn-default btn-cdi-action" data-toggle="modal" data-target="#exampleModalCenter" disabled><i class="fa fa-trash" aria-hidden="true" ></i> Eliminar </button>
                     <button class="btn btn-default btn-cdi-action">  <i class="fa fa-floppy-o" aria-hidden="true"></i>  Guardar</button>
                 </div>
             </div>
@@ -157,10 +157,12 @@
 
 
     var $remove = $('#remove')
+    var $modalbuttonprod = $('#modalbuttonprod');
 
     $(function() {
         $table.on('check.bs.table uncheck.bs.table check-all.bs.table uncheck-all.bs.table', function () {
             $remove.prop('disabled', !$table.bootstrapTable('getSelections').length)
+            $modalbuttonprod.prop('disabled', !$table.bootstrapTable('getSelections').length)
         });
 
         $remove.click(function () {
@@ -171,10 +173,10 @@
             $table.bootstrapTable('remove', {
                 field: 'Codigo',
                 values: ids
-
             })
-            $('#exampleModalCenter').modal('hide')
+            $('#exampleModalCenter').modal('hide');
             $remove.prop('disabled', true)
+            $modalbuttonprod.prop('disabled', true)
         })
     })
 </script>
