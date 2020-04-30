@@ -342,3 +342,76 @@ var EnvioFactura = [
         "Precio": "15€"
     }
 ];
+
+var HistorialPedidos = [
+    {
+        "NumeroPedido": 0,
+        "Fentrada": "01/01/2020",
+        "Cliente": "Denegado",
+        "Express": "si",
+        "Fentrega": "01/07/2020",
+        "Puntos": 77,
+        "Estado": "Embalaje",
+        "EnvioAvsios": "no"
+    },
+    {
+        "NumeroPedido": 1,
+        "Fentrada": "01/02/2020",
+        "Cliente": "Denegado",
+        "Express": "si",
+        "Fentrega": "01/08/2020",
+        "Puntos": 300,
+        "Estado": "En seco",
+        "EnvioAvsios": "si"
+    },
+    {
+        "NumeroPedido": 2,
+        "Fentrada": "01/03/2020",
+        "Cliente": "Aprobado",
+        "Express": "si",
+        "Fentrega": "01/07/2020",
+        "Puntos": 300,
+        "Estado": "Secado y Revion",
+        "EnvioAvsios": "no"
+    },
+    {
+        "NumeroPedido": 3,
+        "Fentrada": "01/02/2020",
+        "Cliente": "Denegado",
+        "Express": "si",
+        "Fentrega": "01/09/2020",
+        "Puntos": 90,
+        "Estado": "En seco",
+        "EnvioAvsios": "si"
+    },
+    {
+        "NumeroPedido": 4,
+        "Fentrada": "01/05/2020",
+        "Cliente": "Denegado",
+        "Express": "no",
+        "Fentrega": "01/08/2020",
+        "Puntos": 90,
+        "Estado": "Secado y Revion",
+        "EnvioAvsios": "no"
+    },
+    {
+        "NumeroPedido": 5,
+        "Fentrada": "01/01/2020",
+        "Cliente": "Denegado",
+        "Express": "si",
+        "Fentrega": "01/08/2020",
+        "Puntos": 77,
+        "Estado": "Embalaje",
+        "EnvioAvsios": "si"
+    },
+    {
+        "NumeroPedido": 6,
+        "Fentrada": "01/02/2020",
+        "Cliente": "Denegado",
+        "Express": "no",
+        "Fentrega": "01/07/2020",
+        "Puntos": 300,
+        "Estado": "Comprobacion",
+        "EnvioAvsios": "si"
+    }
+];
