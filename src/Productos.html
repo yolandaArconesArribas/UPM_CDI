@@ -68,16 +68,14 @@
                         <table id="table"
                                data-pagination="true"
                                data-data-field="items"
-                               data-checkbox-header="false"
+                               data-checkbox-header="true"
                                data-click-to-select="true"
                                data-filter-control="true"
-                               data-show-search-clear-button="true"
                                data-page-size="5"
-                               data-height="446"
                         >
                             <thead>
                             <tr>
-                                <th data-radio="true"></th>
+                                <th data-checkbox="true"></th>
                                 <th data-field="Codigo" data-filter-control="input">Codigo </th>
                                 <th data-field="Prenda"data-filter-control="input" >Prenda</th>
                                 <th data-field="Descripcion"data-filter-control="input" >Descripcion</th>
@@ -124,7 +122,7 @@
 
 
                 <button class="btn btn-default btn-cdi-action cancelar" data-dismiss="modal"><i class="fa fa-times" aria-hidden="true"></i> Cancelar </button>
-                <button class="btn btn-default btn-cdi-action aceptarOK">  <i class="fa fa-check" aria-hidden="true"></i> Aceptar</button>
+                <button id="remove"  class="btn btn-default btn-cdi-action aceptarOK">  <i class="fa fa-check" aria-hidden="true"></i> Aceptar</button>
             </div>
         </div>
     </div>
@@ -152,9 +150,32 @@
     var $table = $('#table');
 
     $(function() {
-        let data = obtenerdatos("db_usuarios");
+        let data = obtenerdatos("db_productos");
         console.log(data);
         $table.bootstrapTable({data: data})
+    })
+
+
+    var $remove = $('#remove')
+
+    $(function() {
+        $table.on('check.bs.table uncheck.bs.table check-all.bs.table uncheck-all.bs.table', function () {
+            $remove.prop('disabled', !$table.bootstrapTable('getSelections').length)
+        });
+
+        $remove.click(function () {
+            var ids = $.map($table.bootstrapTable('getSelections'), function (row) {
+                return row.Codigo;
+            });
+
+            $table.bootstrapTable('remove', {
+                field: 'Codigo',
+                values: ids
+
+            })
+            $('#exampleModalCenter').modal('hide')
+            $remove.prop('disabled', true)
+        })
     })
 </script>
 </body>

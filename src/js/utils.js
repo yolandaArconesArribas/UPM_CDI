@@ -415,3 +415,48 @@ var HistorialPedidos = [
         "EnvioAvsios": "si"
     }
 ];
+
+var db_productos = [
+    {
+        "Codigo": 0,
+        "Prenda": "Pantalon",
+        "Descripcion": "Denegado",
+        "Precio": 12
+    },
+    {
+        "Codigo": 1,
+        "Prenda": "Abrigo",
+        "Descripcion": "Tejidos Especiales",
+        "Precio": 10
+    },
+    {
+        "Codigo": 2,
+        "Prenda": "Abrigo",
+        "Descripcion": "Tejidos Especiales",
+        "Precio": 25
+    },
+    {
+        "Codigo": 3,
+        "Prenda": "Camisa",
+        "Descripcion": "Tejidos Especiales",
+        "Precio": 25
+    },
+    {
+        "Codigo": 4,
+        "Prenda": "Corbata",
+        "Descripcion": "Denegado",
+        "Precio": 12
+    },
+    {
+        "Codigo": 5,
+        "Prenda": "Camisa",
+        "Descripcion": "Denegado",
+        "Precio": 30
+    },
+    {
+        "Codigo": 6,
+        "Prenda": "Corbata",
+        "Descripcion": "Tejidos Especiales",
+        "Precio": 30
+    }
+]
