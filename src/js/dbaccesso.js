@@ -5,4 +5,5 @@ function GuardarDatos(tbl_name, data) {
 GuardarDatos("db_usuarios",data_user);
 GuardarDatos("db_encargado",data_encargado);
 GuardarDatos("db_HistorialAvisosEnviados",dato_HistorialAvisosEnviados);
+GuardarDatos("data_enviaravisos",data_enviaravisos);
 

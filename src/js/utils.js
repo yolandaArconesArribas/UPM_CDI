@@ -241,3 +241,48 @@ var data_encargado = [
         "Pass": 1234
     }
 ];
+
+var data_enviaravisos = [
+    {
+        "_id": "5eab01b121f725479e158731",
+        "Cliente": "Kelley",
+        "TipoAviso": "Valentine",
+        "Enviado": "si"
+    },
+    {
+        "_id": "5eab01b12bad87d68707aa9b",
+        "Cliente": "Gina",
+        "TipoAviso": "Tate",
+        "Enviado": "no"
+    },
+    {
+        "_id": "5eab01b1b3c4a5a138b62677",
+        "Cliente": "Ashley",
+        "TipoAviso": "Gardner",
+        "Enviado": "no"
+    },
+    {
+        "_id": "5eab01b16bd01dad2617f690",
+        "Cliente": "Christy",
+        "TipoAviso": "Prince",
+        "Enviado": "si"
+    },
+    {
+        "_id": "5eab01b12367474689a4ceda",
+        "Cliente": "Phoebe",
+        "TipoAviso": "Gallegos",
+        "Enviado": "si"
+    },
+    {
+        "_id": "5eab01b184058acf8b3175f0",
+        "Cliente": "Ratliff",
+        "TipoAviso": "Barr",
+        "Enviado": "no"
+    },
+    {
+        "_id": "5eab01b108acad89c0d95b69",
+        "Cliente": "Cunningham",
+        "TipoAviso": "Wheeler",
+        "Enviado": "no"
+    }
+]
