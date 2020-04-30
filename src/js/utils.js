@@ -460,3 +460,48 @@ var db_productos = [
         "Precio": 30
     }
 ]
+
+var db_promociones = [
+    {
+        "Codigo": 0,
+        "Promocion": "Descuento 20%",
+        "Descripcion": "Descuento en Tejidos Especiales",
+        "Precio": 12
+    },
+    {
+        "Codigo": 1,
+        "Promocion": "Descuento 10%",
+        "Descripcion": "Descuento en  Abrigos de vestidos boda",
+        "Precio": 25
+    },
+    {
+        "Codigo": 2,
+        "Promocion": "Descuento 20%",
+        "Descripcion": "Descuento en  Abrigos de vestidos boda",
+        "Precio": 12
+    },
+    {
+        "Codigo": 3,
+        "Promocion": "Descuento 20%",
+        "Descripcion": "Descuento en Tejidos Especiales",
+        "Precio": 30
+    },
+    {
+        "Codigo": 4,
+        "Promocion": "Descuento 10%",
+        "Descripcion": "Descuento en  Abrigos de cuero",
+        "Precio": 25
+    },
+    {
+        "Codigo": 5,
+        "Promocion": "Descuento 20%",
+        "Descripcion": "Descuento en  Abrigos de cuero",
+        "Precio": 80
+    },
+    {
+        "Codigo": 6,
+        "Promocion": "Descuento 20%",
+        "Descripcion": "Descuento en  Abrigos de cuero",
+        "Precio": 10
+    }
+];
