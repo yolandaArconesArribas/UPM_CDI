@@ -24,7 +24,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
-
+    <link href="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.css" rel="stylesheet">
 </head>
 <body>
 
@@ -61,65 +61,24 @@
                 <div class="col-12">
                     <div style="background-color: white">
 
-                        <table class="table table-bordered table-hover ">
-                            <thead class="thead-dark table-color">
+                        <table id="table"
+                               data-pagination="true"
+                               data-data-field="items"
+                               data-checkbox-header="true"
+                               data-click-to-select="true"
+                               data-filter-control="true"
+                               data-page-size="5"
+                        >
+                            <thead>
                             <tr>
-                                <th scope="col"> </th>
-                                <th scope="col" style="text-align: center"><i class="fa fa-user" aria-hidden="true"></i><br>Nombre</th>
-                                <th scope="col" style="text-align: center"><i class="fa fa-user" aria-hidden="true"></i><br>Apellidos</th>
-
-
-                                <th scope="col" style="text-align: center"><i class="fa fa-envelope" aria-hidden="true"></i><br>Email</th>
-                                <th scope="col" style="text-align: center"><i class="fa fa-id-card-o" aria-hidden="true"></i><br>Tarjeta Fidelizacion</th>
-                                <th scope="col" style="text-align: center"><i class="fa fa-eye" aria-hidden="true"></i><br> Ver detalle</th>
-
+                                <th data-checkbox="true"></th>
+                                <th data-field="Nombre" data-filter-control="input">Nombre </th>
+                                <th data-field="Apellido"data-filter-control="input" >Apellido</th>
+                                <th data-field="Email" data-filter-control="input" operateEvents" >Email</th>
+                                <th data-field="TarjetaFidelizacion" data-filter-control="input"  >Tarjeta Fidelizacion</th>
+                                <th data-field="DNI" data-filter-control="input" data-formatter="operateFormatter" data-events="operateEvents" data-align="center">Ver detalle</th>
                             </tr>
                             </thead>
-                            <thead class="thead-dark table-color">
-                            <tr>
-                                <th scope="col" style="background-color: white !important;"><input type="text" class="form-control"  placeholder="Filtro"/></th>
-                                <th scope="col" style="background-color: white !important;"><input type="text" class="form-control"  placeholder="Filtro"/></th>
-                                <th scope="col" style="background-color: white !important;"><input type="text" class="form-control"  placeholder="Filtro"/></th>
-                                <th scope="col" style="background-color: white !important;"><input type="text" class="form-control"  placeholder="Filtro"/></th>
-                                <th scope="col" style="background-color: white !important;"><input type="text" class="form-control"  placeholder="Filtro"/></th>
-                                <th scope="col" style="background-color: white !important;"><input type="text" class="form-control"  placeholder="Filtro"/></th>
-
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-
-                                <td style="text-align: center"><input type="checkbox" ></td>
-                                <td>as</td>
-                                <td><i class="fa fa-bolt" aria-hidden="true"></i></td>
-                                <td><a href="#">Promo 3x2</a></td>
-                                <td>250</td>
-                                <td style="text-align: center"><a href=""><span class="eye-cdi"><i class="fa fa-eye" aria-hidden="true"></i></span></a></td>
-
-
-                            </tr>
-
-                            <tr>
-                                <td style="text-align: center"><input type="checkbox" ></td>
-                                <td>s</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                                <td>@mdo</td>
-                                <td>@mdo</td>
-                            </tr>
-
-                            </tbody>
-                            <tfoot>
-                            <tr>
-                                <td colspan="4">Mostrando 1 de 10 entradas</td>
-                                <td colspan="5" style="text-align: right">
-                                    <a href="">anterior</a>
-                                    <a href="">1</a><a href="">2</a><a href="">3</a><a href="">4</a><a
-                                        href="">5</a>
-                                    <a href="">siguiente</a>
-                                </td>
-                            </tr>
-                            </tfoot>
                         </table>
                     </div>
                 </div>
@@ -127,8 +86,8 @@
             </div>
 
 
-            <div class="row justify-content-center">
-              <div class="col-5">
+            <div class="row justify-content-center align-items-center">
+              <div class="col-5" style="margin-top: 20px">
                   <button class="btn btn-default btn-cdi-action"> <i class="fa fa-arrow-circle-left" aria-hidden="true"></i> Volver </button>
                   <button class="btn btn-default btn-cdi-action"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar </button>
                   <button class="btn btn-default btn-cdi-action">  <i class="fa fa-floppy-o" aria-hidden="true"></i>  Guardar</button>
@@ -143,13 +102,52 @@
 <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/contact.js"></script>
 <script type="text/javascript" src="js/validator.js"></script>
-<script type="text/javascript" src="js/countdown.js"></script>
 <script type="text/javascript" src="js/particles.min.js"></script>
 <script type="text/javascript" src="js/particles_2.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
 
+<script src="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.js"></script>
+<script src="https://unpkg.com/bootstrap-table@1.16.0/dist/extensions/toolbar/bootstrap-table-toolbar.min.js"></script>
+<script src="https://unpkg.com/bootstrap-table@1.16.0/dist/extensions/filter-control/bootstrap-table-filter-control.min.js"></script>
+
+
+<script type="text/javascript" src="js/utils.js"></script>
+<script type="text/javascript" src="js/dbaccesso.js"></script>
+
+
+<script>
+    var $table = $('#table');
+
+    $(function() {
+        let data = obtenerdatos("db_usuarios");
+        console.log(data);
+        $table.bootstrapTable({data: data})
+    })
+
+
+    window.operateEvents = {
+        'click .like': function (e, value, row) {
+            alert('ENVIAR ' + value)
+        },
+    }
+
+    function operateFormatter(value, row, index) {
+
+
+            return [
+                '<a class="like letter-cdi" href="javascript:void(0)" title="Like" <span class=""><i class="fa fa-eye" aria-hidden="true"></i></span></a>'
+
+            ].join('')
+
+
+
+    }
+
+
+</script>
 
 </body>
 </html>
+
+
