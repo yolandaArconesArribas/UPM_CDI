@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Basic Page Info -->
+    <meta charset="utf-8">
+    <title>Limpio - Coming Soon</title>
+    <meta name="description" content="Laaris - Coming Soon">
+    <meta name="author" content="laaris.com">
+
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="resources/img/fav.png"/>
+
+    <!-- FONT -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,400,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:700|Lobster+Two" rel="stylesheet">
+
+    <!-- ICON FONTS -->
+    <link rel="stylesheet" href="css/font_awesome.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.css" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="wrapper">
+    <div id="stripes">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <div id="particles-js"></div>
+
+    <div class="home svg">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <i class="fa fa-home" aria-hidden="true"></i>
+            </a>
+        </nav>
+
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-9 text-center">
+                    <span class="tools">Seleccionar Estado <i class="fa fa-check-square-o" aria-hidden="true"></i></span>
+                </div>
+            </div>
+
+            <br><br><br>
+
+            <div class="row">
+
+                <div class="col-12">
+                    <div style="background-color: white">
+
+
+                        <table id="table"
+                               data-pagination="true"
+                               data-data-field="items"
+                               data-checkbox-header="false"
+                               data-click-to-select="true"
+                               data-filter-control="true"
+                               data-show-search-clear-button="true"
+                        >
+                            <thead>
+                            <tr>
+                                <th data-field="state" data-checkbox="true"></th>
+                                <th data-field="Estado" data-filter-control="input">Estado </th>
+                                <th data-field="Descripcion"data-filter-control="input" >Descripcion</th>
+                            </tr>
+                            </thead>
+                        </table>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+            <br><br>
+            <div class="row justify-content-center">
+                <div class="col-5">
+                    <button class="btn btn-default btn-cdi-action"> <i class="fa fa-arrow-circle-left" aria-hidden="true"></i> Volver </button>
+                    <button class="btn btn-default btn-cdi-action"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar </button>
+                    <button class="btn btn-default btn-cdi-action">  <i class="fa fa-floppy-o" aria-hidden="true"></i>  Guardar</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/validator.js"></script>
+<script type="text/javascript" src="js/particles.min.js"></script>
+<script type="text/javascript" src="js/particles_2.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+
+<script src="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.js"></script>
+<script src="https://unpkg.com/bootstrap-table@1.16.0/dist/extensions/toolbar/bootstrap-table-toolbar.min.js"></script>
+<script src="https://unpkg.com/bootstrap-table@1.16.0/dist/extensions/filter-control/bootstrap-table-filter-control.min.js"></script>
+
+
+<script type="text/javascript" src="js/utils.js"></script>
+<script type="text/javascript" src="js/dbaccesso.js"></script>
+
+
+<script>
+    var $table = $('#table');
+
+    $(function() {
+        let data = obtenerdatos("db_usuarios");
+        console.log(data);
+        $table.bootstrapTable({data: data})
+    })
+</script>
+</body>
+</html>

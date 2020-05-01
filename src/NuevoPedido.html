@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Basic Page Info -->
+    <meta charset="utf-8">
+    <title>Limpio - Coming Soon</title>
+    <meta name="description" content="Laaris - Coming Soon">
+    <meta name="author" content="laaris.com">
+
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="resources/img/fav.png"/>
+
+    <!-- FONT -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,400,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:700|Lobster+Two" rel="stylesheet">
+
+    <!-- ICON FONTS -->
+    <link rel="stylesheet" href="css/font_awesome.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+<body onLoad="loadNumberOrder(); loadNumberClient()">
+
+<div class="wrapper">
+    <div id="stripes">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <div id="particles-js"></div>
+
+    <div class="home svg">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <i class="fa fa-home" aria-hidden="true"></i>
+            </a>
+        </nav>
+
+        <div class="container">
+
+            <br><br><br>
+
+            <div class="row">
+
+                <div class="col-12">
+                    <div style="background-color: #FFFCF9; padding: 15px; border-radius: 5px;">
+                        <div class="row justify-content-center">
+                            <div class="col-6 text-center">
+                                <span class="tools">Nuevo Pedido <i class="fa fa-cart-arrow-down" aria-hidden="true"></i></span>
+                            </div>
+                        </div>
+                        <br><br><br>
+                        <form name="registroProducto" class="needs-validation" id="registerNewOrder" autocomplete="off" novalidate method="post" >
+                            <div class="form-group row">
+                                <label for="reservationDate" class="col-sm-2 col-form-label"><span class="form-cdi">Fecha Entrada</span></label>
+                                <div class="col-sm-10">
+                                    <div class="datepicker date input-group p-0 shadow-sm" >
+                                        <input value="" name="fechaEntrada" type="text" placeholder="Selecciona fecha de entrada" class="form-control " id="reservationDate" required>
+                                        <div class="input-group-append"><span class="input-group-text px-4"><i class="fa fa-clock-o"></i></span></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="deliveryDate" class="col-sm-2 col-form-label"><span class="form-cdi">Fecha Entrega</span></label>
+                                <div class="col-sm-10">
+                                    <div class="datepicker date input-group p-0 shadow-sm" >
+                                        <input value="" name="fechaEntrega" type="text" placeholder="Selecciona fecha de entrega" class="form-control " id="deliveryDate" required>
+                                        <div class="input-group-append"><span class="input-group-text px-4"><i class="fa fa-clock-o"></i></span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="selectStuff" class="col-sm-2 col-form-label"><span class="form-cdi">Encargado</span></label>
+                                <div class="col-sm-10">
+                                    <select id="selectStuff" name="inputStuff" data-show-content="true"  class="form-control" required>
+                                        <option value="" > </option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="selectState" class="col-sm-2 col-form-label"><span class="form-cdi">Estado</span></label>
+                                <div class="col-sm-10">
+                                    <select id="selectState" class="form-control">
+                                        <option selected>En Lavanderia</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="precio" class="col-sm-2 col-form-label"><span class="form-cdi">Precio</span></label>
+                                <div class="col-sm-10">
+                                    <input  disabled type="text" class="form-control" name="price" id="precio"  value="0">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="selectClient" class="col-sm-2 col-form-label"><span class="form-cdi">Cliente</span></label>
+                                <div class="col-sm-10">
+                                    <select id="selectClient" name="inputClient" data-show-content="true"  class="form-control" required>
+                                        <option value=""></option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="selectPrenda" class="col-sm-2 col-form-label"><span class="form-cdi">Prenda</span></label>
+                                <div class="col-sm-10">
+                                    <select id="selectPrenda" class="form-control needs-validation-select-1" required>
+                                        <option value="" data-price="0"></option>
+                                        <option value="1" data-price="5">Camisa</option>
+                                        <option value="2" data-price="6">Pantalón</option>
+                                        <option value="3" data-price="12.50">Abrigo</option>
+                                        <option value="4" data-price="3">Corbata</option>
+                                        <option value="5" data-price="25">Vestido</option>
+                                        <option value="6" data-price="10">Bolso</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="selectService" class="col-sm-2 col-form-label"><span class="form-cdi">Servicios</span></label>
+                                <div class="col-sm-10">
+                                    <select id="selectService" class="form-control needs-validation-select-2" required>
+                                        <option value=""  data-price="0"></option>
+                                        <option value="1" data-price="8">Completo</option>
+                                        <option value="2" data-price="5">En Seco</option>
+                                        <option value="3" data-price="3">Tintado</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="selectExtra" class="col-sm-2 col-form-label"><span class="form-cdi">Extras</span></label>
+                                <div class="col-sm-10">
+                                    <select id="selectExtra" class="form-control needs-validation-select-3">
+                                        <option value="0" data-price="0"></option>
+                                        <option value="1" data-price="5">Fiesta</option>
+                                        <option value="2" data-price="10">Boda</option>
+                                        <option value="3" data-price="7">Cuero</option>
+                                        <option value="4" data-price="11">Seda</option>
+                                        <option value="5" data-price="13">Bambú</option>
+                                        <option value="6" data-price="3">Abalorios</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="selectFix" class="col-sm-2 col-form-label"><span class="form-cdi">Arreglos</span></label>
+                                <div class="col-sm-10">
+                                    <select id="selectFix" class="form-control needs-validation-select-4">
+                                        <option value="0" data-price="0"></option>
+                                        <option value="1" data-price="2">Bajo</option>
+                                        <option value="2" data-price="1">Boton</option>
+                                        <option value="3" data-price="5">Descosido</option>
+                                        <option value="4" data-price="3">Cremallera</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="selectFlaw" class="col-sm-2 col-form-label"><span class="form-cdi">Desperfectos</span></label>
+                                <div class="col-sm-10">
+                                    <input STYLE="height: 250% " type="text" class="form-control" id="selectFlaw" placeholder="Desperfectos">
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row" style="position: relative;top: 60px">
+                                <label for="cbox2" class="col-sm-2 col-form-label"><span class="form-cdi">Servicio Express</span></label>
+                                <div class="col-sm-10">
+                                    <input  id="cbox2" class="form-control needs-validation-select-5" style="position: relative;top: 10px;right: 450px" name="checkbox" type="checkbox" onClick="if (this.checked) sumar(); else restar()" value="checkbox">
+                                </div>
+                            </div>
+                            <div class="row justify-content-center" style="text-align: center;margin-top: 100px">
+                                <div class="col-6">
+                                    <a class="btn btn-default btn-cdi-action cancelar" href="MisHerramientas.html"><i class="fa fa-times" aria-hidden="true"></i> Cancelar </a>
+                                    <button id="buttonRegisterOrder" type="submit" class="btn btn-default btn-cdi-action guardar">  <i class="fa fa-floppy-o" aria-hidden="true"></i>  Guardar</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Guardado</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Todos los campos estan correcto y se ha guardado el pedido.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <a  class="btn btn-primary" href="MisHerramientas.html">Ok</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/particles.min.js"></script>
+<script type="text/javascript" src="js/particles_2.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="js/utils.js"></script>
+<script type="text/javascript" src="js/dbaccesso.js"></script>
+<script type="text/javascript" src="js/selectForm.js"></script>
+<script type="text/javascript" src="js/bootstrap-datepicker.min.js"></script>
+<script type="text/javascript" src="js/newOrder.js"></script>
+</body>
+</html>

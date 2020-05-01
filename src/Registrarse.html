@@ -1,10 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <!-- Basic Page Info -->
+    <meta charset="utf-8">
+    <title>Limpio - Coming Soon</title>
+    <meta name="description" content="Laaris - Coming Soon">
+    <meta name="author" content="laaris.com">
+
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="resources/img/fav.png"/>
+
+    <!-- FONT -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,400,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:700|Lobster+Two" rel="stylesheet">
+
+    <!-- ICON FONTS -->
+    <link rel="stylesheet" href="css/font_awesome.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
 </head>
 <body>
 
+<div class="wrapper">
+    <div id="stripes">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <div id="particles-js"></div>
+
+    <div class="home svg">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <i class="fa fa-home" aria-hidden="true"></i>
+            </a>
+        </nav>
+        <div class="container">
+
+            <div class="row justify-content-between align-items-center">
+                <div class="col-4 ">
+                    <span style="text-align: right; color: #EEEEEE; font-weight: bold; font-size: 90px;">Tintorerias</span>
+                </div>
+                <div class="col-4">
+                    <p><h2 style="width: 120%" class="limpiot">LIMPIO</h2></p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-6 text-center">
+                    <span class="tools">Registrarse</span>
+                </div>
+            </div>
+
+            <br><br><br>
+            <form class="registerUser" id="register-form" autocomplete="off" method="post" >
+                <div class="form-row" >
+                    <div class="input-group-prepend" style="height: 50%;margin-left: 60px;margin-top: 30px">
+                        <a class="input-group-text" id="inputGroupPrepend0"><i class="fa fa-user-circle" style="font-size: 140%"  aria-hidden="true"></i></a>
+                    </div>
+                    <div class="col-md-8 mb-3  md-form" >
+                        <label for="Nombre">Nombre</label>
+                        <input name="Nombre" type="text" class="form-control" id="Nombre" aria-describedby="inputGroupPrepend0" required>
+                        <div>
+                            <span class="help-block" id="error"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row" >
+                    <div class="input-group-prepend" style="height: 50%;margin-left: 60px;margin-top: 30px">
+                        <a class="input-group-text" id="inputGroupPrepend2"><i class="fa fa-user-circle" style="font-size: 140%" aria-hidden="true"></i></a>
+                    </div>
+                    <div class="col-md-8 mb-3 md-form">
+                        <label for="Apellido">Apellidos</label>
+                        <input name="Apellido" type="text" class="form-control" id="Apellido"  aria-describedby="inputGroupPrepend2" required>
+                        <div>
+                            <span class="help-block" id="error"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row" >
+                    <div class="input-group-prepend" style="height: 50%;margin-left: 60px;margin-top: 30px">
+                        <a class="input-group-text" id="inputGroupPrepend5"><i class="fa fa-user" style="font-size: 140%" aria-hidden="true"></i></a>
+                    </div>
+                    <div class="col-md-8 mb-3 md-form">
+                        <label for="DNI">DNI (se usará como nombre para el logging)</label>
+                        <input name="DNI" type="text" class="form-control" id="DNI"  aria-describedby="inputGroupPrepend5" required>
+                        <div>
+                            <span class="help-block" id="error"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row" >
+                    <div class="input-group-prepend" style="height: 50%;margin-left: 60px;margin-top: 35px">
+                        <a class="input-group-text" id="inputGroupPrepend3"><i class="fa fa-unlock-alt" style="font-size: 140%" aria-hidden="true"></i></a>
+                    </div>
+                    <div class="col-md-5 mb-3 md-form">
+                        <label for="Pass">Contraseña</label>
+                        <input name="Pass" type="password" class="form-control" id="Pass" aria-describedby="inputGroupPrepend3" required>
+                        <div>
+                            <span class="help-block" id="error"></span>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary"  style="height: 50%;position: relative;top: 75px" type="button" onclick="showPass()"><a class="fa fa-eye-slash icon"></a> </button>
+                </div>
+                <div class="form-row">
+                    <div class="input-group-prepend" style="height: 50%;margin-left: 60px;margin-top: 30px">
+                        <a class="input-group-text" id="inputGroupPrepend4"><i class="fa fa-unlock-alt" style="font-size: 140%" aria-hidden="true"></i></a>
+                    </div>
+                    <div class="col-md-5 mb-3 md-form">
+                        <label for="validationServer055">Repetir Contraseña</label>
+                        <input name="cpassword" type="password" class="form-control" id="validationServer055" aria-describedby="inputGroupPrepend4 " required>
+                        <div>
+                            <span class="help-block" id="error"></span>
+                        </div>
+                    </div>
+                </div>
+                <button id="buttonRegisterUser" class="btn btn-primary btn-sm btn-rounded" type="submit" style="margin-left: 230px;margin-bottom: 30px">Registrarse</button>
+            </form>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/contact.js"></script>
+<script type="text/javascript" src="js/validator.js"></script>
+<script type="text/javascript" src="js/particles.min.js"></script>
+<script type="text/javascript" src="js/particles_2.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="js/validate.js"></script>
+<script src="js/jquery.validate.js"></script>
+<script type="text/javascript" src="js/utils.js"></script>
+<script type="text/javascript" src="js/dbaccesso.js"></script>
 </body>
 </html>
