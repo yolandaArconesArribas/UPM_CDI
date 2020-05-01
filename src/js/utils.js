@@ -505,3 +505,69 @@ var db_promociones = [
         "Precio": 10
     }
 ];
+
+var RealizarFactura = [
+    {
+        "NumeroPedido": 0,
+        "Express": "Descuento 20%",
+        "Descuento": "Descuento en  Abrigos de vestidos boda",
+        "CanjearPuntos": 25,
+        "Precio": 30,
+        "AprobarPresupuesto": 12,
+        "EnviarFactura": "no"
+    },
+    {
+        "NumeroPedido": 1,
+        "Express": "Descuento 10%",
+        "Descuento": "Descuento en Tejidos Especiales",
+        "CanjearPuntos": 80,
+        "Precio": 10,
+        "AprobarPresupuesto": 30,
+        "EnviarFactura": "no"
+    },
+    {
+        "NumeroPedido": 2,
+        "Express": "Descuento 10%",
+        "Descuento": "Descuento en Tejidos Especiales",
+        "CanjearPuntos": 30,
+        "Precio": 30,
+        "AprobarPresupuesto": 80,
+        "EnviarFactura": "si"
+    },
+    {
+        "NumeroPedido": 3,
+        "Express": "Descuento 20%",
+        "Descuento": "Descuento en Tejidos Especiales",
+        "CanjearPuntos": 10,
+        "Precio": 30,
+        "AprobarPresupuesto": 10,
+        "EnviarFactura": "si"
+    },
+    {
+        "NumeroPedido": 4,
+        "Express": "Descuento 20%",
+        "Descuento": "Descuento en  Abrigos de cuero",
+        "CanjearPuntos": 30,
+        "Precio": 10,
+        "AprobarPresupuesto": 25,
+        "EnviarFactura": "si"
+    },
+    {
+        "NumeroPedido": 5,
+        "Express": "Descuento 20%",
+        "Descuento": "Descuento en  Abrigos de cuero",
+        "CanjearPuntos": 80,
+        "Precio": 25,
+        "AprobarPresupuesto": 30,
+        "EnviarFactura": "no"
+    },
+    {
+        "NumeroPedido": 6,
+        "Express": "Descuento 20%",
+        "Descuento": "Descuento en Tejidos Especiales",
+        "CanjearPuntos": 12,
+        "Precio": 10,
+        "AprobarPresupuesto": 30,
+        "EnviarFactura": "no"
+    }
+];

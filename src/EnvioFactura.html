@@ -66,7 +66,7 @@
                             <div class="form-group row">
                                 <label for="staticEmail" class="col-sm-2 col-form-label"><span class="form-cdi">Nombre</span></label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" id="validationCustom01" placeholder="Nombre" required>
+                                    <input type="text" class="form-control" id="validationCustom01" placeholder="Nombre" value="Enrique" disabled>
                                     <div class="valid-feedback">
                                         Looks good!
                                     </div>
@@ -76,7 +76,7 @@
                             <div class="form-group row">
                                 <label for="staticEmail" class="col-sm-2 col-form-label"><span class="form-cdi">DNI</span></label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" id="validationCustom01" placeholder="DNI" required>
+                                    <input type="text" class="form-control" id="validationCustom01" placeholder="DNI" value="12315544S"disabled>
                                     <div class="valid-feedback">
                                         Looks good!
                                     </div>
@@ -85,7 +85,7 @@
                             <div class="form-group row">
                                 <label for="staticEmail" class="col-sm-2 col-form-label"><span class="form-cdi">Tarjeta Fidelizacion</span></label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" id="validationCustom01" placeholder="Tarjeta Fidelizacion"  required>
+                                    <input type="text" class="form-control" id="validationCustom01" placeholder="Tarjeta Fidelizacion"  value="124844T" disabled>
                                     <div class="valid-feedback">
                                         Looks good!
                                     </div>
@@ -94,7 +94,7 @@
                             <div class="form-group row">
                                 <label for="staticEmail" class="col-sm-2 col-form-label"><span class="form-cdi">Canjear Puntos</span></label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" id="validationCustom01" placeholder="Canjear Puntos" required>
+                                    <input type="text" class="form-control" id="validationCustom01" placeholder="Canjear Puntos" value="40" required>
                                     <div class="valid-feedback">
                                         Looks good!
                                     </div>
@@ -127,9 +127,8 @@
 
                         <div class="row justify-content-center" style="text-align: center">
                             <div class="col-8">
-                                <button  class="btn btn-default btn-cdi-action "> <i class="fa fa-arrow-circle-left" aria-hidden="true"></i> Volver </button>
-                                <button type="submit" class="btn btn-default btn-cdi-action guardar">  <i class="fa fa-trash" aria-hidden="true"></i> Eliminar</button>
-                                <button type="submit" class="btn btn-default btn-cdi-action guardar">  <i class="fa fa-paper-plane" aria-hidden="true"></i>  Enviar Cliente</button>
+                                <a href="RealizarFactura.html" class="btn btn-default btn-cdi-action "> <i class="fa fa-arrow-circle-left" aria-hidden="true"></i> Volver </a>
+                                <button type="submit" class="btn btn-default btn-cdi-action guardar" data-toggle="modal" data-target="#exampleModalCenter">  <i class="fa fa-paper-plane" aria-hidden="true"></i>  Enviar Cliente</button>
                             </div>
                         </div>
 
@@ -165,7 +164,24 @@
     </div>
 
 </div>
-
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle"> <i class="fa fa-paper-plane" aria-hidden="true"></i>  Factura Enviada</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+               La factura a sido enviada
+            </div>
+            <div class="modal-footer">
+                <a href="RealizarFactura.html"  class="btn btn-danger"  style="color: white">Cerrar</a>
+            </div>
+        </div>
+    </div>
+</div>
 <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>

@@ -10,4 +10,5 @@ GuardarDatos("EnvioFactura",EnvioFactura);
 GuardarDatos("HistorialPedidos",HistorialPedidos);
 GuardarDatos("db_productos",db_productos);
 GuardarDatos("db_promociones",db_promociones);
+GuardarDatos("db_RealizarFactura",RealizarFactura);
 
